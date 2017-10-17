@@ -3163,7 +3163,7 @@ LoRaMacStatus_t LoRaMacMlmeRequest( MlmeReq_t *mlmeRequest )
 
             altDr.NbTrials = JoinRequestTrials + 1;
 
-            LoRaMacParams.ChannelsDatarate = RegionAlternateDr( LoRaMacRegion, &altDr );
+            LoRaMacParams.ChannelsDatarate = DR_1;//RegionAlternateDr( LoRaMacRegion, &altDr );
 
             status = Send( &macHdr, 0, NULL, 0 );
             break;

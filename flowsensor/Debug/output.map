@@ -7006,6 +7006,8 @@ Discarded input sections
  .group         0x0000000000000000        0x8 Src/LoRaMac.o
  .group         0x0000000000000000        0x8 Src/LoRaMac.o
  .text          0x0000000000000000        0x0 Src/LoRaMac.o
+ .text.LoRaMacChannelAdd
+                0x0000000000000000       0x3c Src/LoRaMac.o
  .text.LoRaMacChannelRemove
                 0x0000000000000000       0x3c Src/LoRaMac.o
  .text.LoRaMacMulticastChannelLink
@@ -7016,6 +7018,8 @@ Discarded input sections
                 0x0000000000000000        0xc Src/LoRaMac.o
  .text.LoRaMacTestSetMic
                 0x0000000000000000       0x14 Src/LoRaMac.o
+ .text.LoRaMacTestSetDutyCycleOn
+                0x0000000000000000       0x28 Src/LoRaMac.o
  .text.LoRaMacTestSetChannel
                 0x0000000000000000        0xc Src/LoRaMac.o
  .debug_macro   0x0000000000000000      0x8c8 Src/LoRaMac.o
@@ -7144,6 +7148,8 @@ Discarded input sections
  .text          0x0000000000000000        0x0 Src/Region.o
  .data          0x0000000000000000        0x0 Src/Region.o
  .bss           0x0000000000000000        0x0 Src/Region.o
+ .text.RegionChannelAdd
+                0x0000000000000000       0x12 Src/Region.o
  .text.RegionChannelsRemove
                 0x0000000000000000       0x12 Src/Region.o
  .debug_macro   0x0000000000000000      0x8c8 Src/Region.o
@@ -7292,6 +7298,70 @@ Discarded input sections
  .group         0x0000000000000000        0x8 Src/RegionEU868.o
  .group         0x0000000000000000        0x8 Src/RegionEU868.o
  .text          0x0000000000000000        0x0 Src/RegionEU868.o
+ .data          0x0000000000000000       0x50 Src/RegionEU868.o
+ .bss           0x0000000000000000       0xc8 Src/RegionEU868.o
+ .text.GetNextLowerTxDr
+                0x0000000000000000       0x12 Src/RegionEU868.o
+ .text.GetBandwidth
+                0x0000000000000000       0x2c Src/RegionEU868.o
+ .text.LimitTxPower
+                0x0000000000000000        0x8 Src/RegionEU868.o
+ .text.VerifyTxFreq
+                0x0000000000000000       0xac Src/RegionEU868.o
+ .text.CountNbOfEnabledChannels
+                0x0000000000000000       0xba Src/RegionEU868.o
+ .text.RegionEU868GetPhyParam
+                0x0000000000000000       0xc8 Src/RegionEU868.o
+ .text.RegionEU868SetBandTxDone
+                0x0000000000000000       0x28 Src/RegionEU868.o
+ .text.RegionEU868InitDefaults
+                0x0000000000000000       0x60 Src/RegionEU868.o
+ .text.RegionEU868Verify
+                0x0000000000000000       0x8e Src/RegionEU868.o
+ .text.RegionEU868ChanMaskSet
+                0x0000000000000000       0x34 Src/RegionEU868.o
+ .text.RegionEU868AdrNext
+                0x0000000000000000       0x78 Src/RegionEU868.o
+ .text.RegionEU868ComputeRxWindowParameters
+                0x0000000000000000       0x5c Src/RegionEU868.o
+ .text.RegionEU868RxConfig
+                0x0000000000000000       0xf8 Src/RegionEU868.o
+ .text.RegionEU868TxConfig
+                0x0000000000000000      0x108 Src/RegionEU868.o
+ .text.RegionEU868LinkAdrReq
+                0x0000000000000000      0x15c Src/RegionEU868.o
+ .text.RegionEU868RxParamSetupReq
+                0x0000000000000000       0x40 Src/RegionEU868.o
+ .text.RegionEU868TxParamSetupReq
+                0x0000000000000000        0x6 Src/RegionEU868.o
+ .text.RegionEU868DlChannelReq
+                0x0000000000000000       0x4c Src/RegionEU868.o
+ .text.RegionEU868AlternateDr
+                0x0000000000000000       0x58 Src/RegionEU868.o
+ .text.RegionEU868CalcBackOff
+                0x0000000000000000       0x40 Src/RegionEU868.o
+ .text.RegionEU868NextChannel
+                0x0000000000000000       0xcc Src/RegionEU868.o
+ .text.RegionEU868ChannelAdd
+                0x0000000000000000       0xf0 Src/RegionEU868.o
+ .text.RegionEU868ChannelsRemove
+                0x0000000000000000       0x2c Src/RegionEU868.o
+ .text.RegionEU868ApplyCFList
+                0x0000000000000000       0x7a Src/RegionEU868.o
+ .text.RegionEU868NewChannelReq
+                0x0000000000000000       0x56 Src/RegionEU868.o
+ .text.RegionEU868SetContinuousWave
+                0x0000000000000000       0x54 Src/RegionEU868.o
+ .text.RegionEU868ApplyDrOffset
+                0x0000000000000000       0x10 Src/RegionEU868.o
+ .rodata        0x0000000000000000       0x5c Src/RegionEU868.o
+ .debug_info    0x0000000000000000     0x3963 Src/RegionEU868.o
+ .debug_abbrev  0x0000000000000000      0x41c Src/RegionEU868.o
+ .debug_loc     0x0000000000000000     0x101b Src/RegionEU868.o
+ .debug_aranges
+                0x0000000000000000       0xf0 Src/RegionEU868.o
+ .debug_ranges  0x0000000000000000      0x100 Src/RegionEU868.o
+ .debug_macro   0x0000000000000000      0x4aa Src/RegionEU868.o
  .debug_macro   0x0000000000000000      0x8c8 Src/RegionEU868.o
  .debug_macro   0x0000000000000000       0x22 Src/RegionEU868.o
  .debug_macro   0x0000000000000000       0x22 Src/RegionEU868.o
@@ -7369,6 +7439,12 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0x2e Src/RegionEU868.o
  .debug_macro   0x0000000000000000       0xec Src/RegionEU868.o
  .debug_macro   0x0000000000000000      0x109 Src/RegionEU868.o
+ .debug_line    0x0000000000000000      0xdf7 Src/RegionEU868.o
+ .debug_str     0x0000000000000000    0x8f334 Src/RegionEU868.o
+ .comment       0x0000000000000000       0x80 Src/RegionEU868.o
+ .debug_frame   0x0000000000000000      0x338 Src/RegionEU868.o
+ .ARM.attributes
+                0x0000000000000000       0x33 Src/RegionEU868.o
  .group         0x0000000000000000        0x8 Src/RegionIN865.o
  .group         0x0000000000000000        0x8 Src/RegionIN865.o
  .group         0x0000000000000000        0x8 Src/RegionIN865.o
@@ -7447,70 +7523,6 @@ Discarded input sections
  .group         0x0000000000000000        0x8 Src/RegionIN865.o
  .group         0x0000000000000000        0x8 Src/RegionIN865.o
  .text          0x0000000000000000        0x0 Src/RegionIN865.o
- .data          0x0000000000000000       0x10 Src/RegionIN865.o
- .bss           0x0000000000000000       0xc8 Src/RegionIN865.o
- .text.GetNextLowerTxDr
-                0x0000000000000000       0x1a Src/RegionIN865.o
- .text.GetBandwidth
-                0x0000000000000000       0x2c Src/RegionIN865.o
- .text.LimitTxPower
-                0x0000000000000000        0x8 Src/RegionIN865.o
- .text.VerifyTxFreq
-                0x0000000000000000       0x2c Src/RegionIN865.o
- .text.CountNbOfEnabledChannels
-                0x0000000000000000       0xba Src/RegionIN865.o
- .text.RegionIN865GetPhyParam
-                0x0000000000000000       0xd0 Src/RegionIN865.o
- .text.RegionIN865SetBandTxDone
-                0x0000000000000000       0x28 Src/RegionIN865.o
- .text.RegionIN865InitDefaults
-                0x0000000000000000       0x60 Src/RegionIN865.o
- .text.RegionIN865Verify
-                0x0000000000000000       0x8e Src/RegionIN865.o
- .text.RegionIN865ChanMaskSet
-                0x0000000000000000       0x34 Src/RegionIN865.o
- .text.RegionIN865AdrNext
-                0x0000000000000000       0x78 Src/RegionIN865.o
- .text.RegionIN865ComputeRxWindowParameters
-                0x0000000000000000       0x5c Src/RegionIN865.o
- .text.RegionIN865RxConfig
-                0x0000000000000000       0xf8 Src/RegionIN865.o
- .text.RegionIN865TxConfig
-                0x0000000000000000      0x108 Src/RegionIN865.o
- .text.RegionIN865LinkAdrReq
-                0x0000000000000000      0x160 Src/RegionIN865.o
- .text.RegionIN865RxParamSetupReq
-                0x0000000000000000       0x40 Src/RegionIN865.o
- .text.RegionIN865TxParamSetupReq
-                0x0000000000000000        0x6 Src/RegionIN865.o
- .text.RegionIN865DlChannelReq
-                0x0000000000000000       0x4c Src/RegionIN865.o
- .text.RegionIN865AlternateDr
-                0x0000000000000000       0x58 Src/RegionIN865.o
- .text.RegionIN865CalcBackOff
-                0x0000000000000000       0x40 Src/RegionIN865.o
- .text.RegionIN865NextChannel
-                0x0000000000000000       0xcc Src/RegionIN865.o
- .text.RegionIN865ChannelAdd
-                0x0000000000000000       0xf0 Src/RegionIN865.o
- .text.RegionIN865ChannelsRemove
-                0x0000000000000000       0x2c Src/RegionIN865.o
- .text.RegionIN865ApplyCFList
-                0x0000000000000000       0x7a Src/RegionIN865.o
- .text.RegionIN865NewChannelReq
-                0x0000000000000000       0x56 Src/RegionIN865.o
- .text.RegionIN865SetContinuousWave
-                0x0000000000000000       0x54 Src/RegionIN865.o
- .text.RegionIN865ApplyDrOffset
-                0x0000000000000000       0x20 Src/RegionIN865.o
- .rodata        0x0000000000000000       0x64 Src/RegionIN865.o
- .debug_info    0x0000000000000000     0x397e Src/RegionIN865.o
- .debug_abbrev  0x0000000000000000      0x41c Src/RegionIN865.o
- .debug_loc     0x0000000000000000     0x1046 Src/RegionIN865.o
- .debug_aranges
-                0x0000000000000000       0xf0 Src/RegionIN865.o
- .debug_ranges  0x0000000000000000      0x100 Src/RegionIN865.o
- .debug_macro   0x0000000000000000      0x4aa Src/RegionIN865.o
  .debug_macro   0x0000000000000000      0x8c8 Src/RegionIN865.o
  .debug_macro   0x0000000000000000       0x22 Src/RegionIN865.o
  .debug_macro   0x0000000000000000       0x22 Src/RegionIN865.o
@@ -7588,12 +7600,6 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0x2e Src/RegionIN865.o
  .debug_macro   0x0000000000000000       0xec Src/RegionIN865.o
  .debug_macro   0x0000000000000000       0xed Src/RegionIN865.o
- .debug_line    0x0000000000000000      0xdea Src/RegionIN865.o
- .debug_str     0x0000000000000000    0x8f292 Src/RegionIN865.o
- .comment       0x0000000000000000       0x80 Src/RegionIN865.o
- .debug_frame   0x0000000000000000      0x334 Src/RegionIN865.o
- .ARM.attributes
-                0x0000000000000000       0x33 Src/RegionIN865.o
  .group         0x0000000000000000        0x8 Src/adc-board.o
  .group         0x0000000000000000        0x8 Src/adc-board.o
  .group         0x0000000000000000        0x8 Src/adc-board.o
@@ -11794,7 +11800,7 @@ LOAD /home/sridhar/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none
                 0x0000000008000000                g_pfnVectors
                 0x000000000800013c                . = ALIGN (0x4)
 
-.text           0x0000000008000140     0xb4a8
+.text           0x0000000008000140     0xb2f0
                 0x0000000008000140                . = ALIGN (0x4)
  *(.text)
  .text          0x0000000008000140       0x6c /home/sridhar/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-m/crtbegin.o
@@ -12123,997 +12129,987 @@ LOAD /home/sridhar/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none
  .text.LoRaMacMibSetRequestConfirm
                 0x0000000008004eb8      0x39c Src/LoRaMac.o
                 0x0000000008004eb8                LoRaMacMibSetRequestConfirm
- .text.LoRaMacChannelAdd
-                0x0000000008005254       0x3c Src/LoRaMac.o
-                0x0000000008005254                LoRaMacChannelAdd
  .text.LoRaMacMlmeRequest
-                0x0000000008005290      0x18c Src/LoRaMac.o
-                0x0000000008005290                LoRaMacMlmeRequest
+                0x0000000008005254      0x17c Src/LoRaMac.o
+                0x0000000008005254                LoRaMacMlmeRequest
  .text.LoRaMacMcpsRequest
-                0x000000000800541c      0x16c Src/LoRaMac.o
-                0x000000000800541c                LoRaMacMcpsRequest
- .text.LoRaMacTestSetDutyCycleOn
-                0x0000000008005588       0x28 Src/LoRaMac.o
-                0x0000000008005588                LoRaMacTestSetDutyCycleOn
+                0x00000000080053d0      0x16c Src/LoRaMac.o
+                0x00000000080053d0                LoRaMacMcpsRequest
  .text.LoRaMacComputeMic
-                0x00000000080055b0       0x8c Src/LoRaMacCrypto.o
-                0x00000000080055b0                LoRaMacComputeMic
+                0x000000000800553c       0x8c Src/LoRaMacCrypto.o
+                0x000000000800553c                LoRaMacComputeMic
  .text.LoRaMacPayloadEncrypt
-                0x000000000800563c       0xec Src/LoRaMacCrypto.o
-                0x000000000800563c                LoRaMacPayloadEncrypt
+                0x00000000080055c8       0xec Src/LoRaMacCrypto.o
+                0x00000000080055c8                LoRaMacPayloadEncrypt
  .text.LoRaMacPayloadDecrypt
-                0x0000000008005728       0x1a Src/LoRaMacCrypto.o
-                0x0000000008005728                LoRaMacPayloadDecrypt
- *fill*         0x0000000008005742        0x2 
+                0x00000000080056b4       0x1a Src/LoRaMacCrypto.o
+                0x00000000080056b4                LoRaMacPayloadDecrypt
+ *fill*         0x00000000080056ce        0x2 
  .text.LoRaMacJoinComputeMic
-                0x0000000008005744       0x58 Src/LoRaMacCrypto.o
-                0x0000000008005744                LoRaMacJoinComputeMic
+                0x00000000080056d0       0x58 Src/LoRaMacCrypto.o
+                0x00000000080056d0                LoRaMacJoinComputeMic
  .text.LoRaMacJoinDecrypt
-                0x000000000800579c       0x48 Src/LoRaMacCrypto.o
-                0x000000000800579c                LoRaMacJoinDecrypt
+                0x0000000008005728       0x48 Src/LoRaMacCrypto.o
+                0x0000000008005728                LoRaMacJoinDecrypt
  .text.LoRaMacJoinComputeSKeys
-                0x00000000080057e4       0x94 Src/LoRaMacCrypto.o
-                0x00000000080057e4                LoRaMacJoinComputeSKeys
+                0x0000000008005770       0x94 Src/LoRaMacCrypto.o
+                0x0000000008005770                LoRaMacJoinComputeSKeys
  .text.RegionIsActive
-                0x0000000008005878        0xc Src/Region.o
-                0x0000000008005878                RegionIsActive
+                0x0000000008005804        0xc Src/Region.o
+                0x0000000008005804                RegionIsActive
  .text.RegionGetPhyParam
-                0x0000000008005884       0x12 Src/Region.o
-                0x0000000008005884                RegionGetPhyParam
+                0x0000000008005810       0x12 Src/Region.o
+                0x0000000008005810                RegionGetPhyParam
  .text.RegionSetBandTxDone
-                0x0000000008005896       0x10 Src/Region.o
-                0x0000000008005896                RegionSetBandTxDone
+                0x0000000008005822       0x10 Src/Region.o
+                0x0000000008005822                RegionSetBandTxDone
  .text.RegionInitDefaults
-                0x00000000080058a6       0x10 Src/Region.o
-                0x00000000080058a6                RegionInitDefaults
+                0x0000000008005832       0x10 Src/Region.o
+                0x0000000008005832                RegionInitDefaults
  .text.RegionVerify
-                0x00000000080058b6       0x14 Src/Region.o
-                0x00000000080058b6                RegionVerify
+                0x0000000008005842       0x14 Src/Region.o
+                0x0000000008005842                RegionVerify
  .text.RegionApplyCFList
-                0x00000000080058ca       0x10 Src/Region.o
-                0x00000000080058ca                RegionApplyCFList
+                0x0000000008005856       0x10 Src/Region.o
+                0x0000000008005856                RegionApplyCFList
  .text.RegionChanMaskSet
-                0x00000000080058da       0x12 Src/Region.o
-                0x00000000080058da                RegionChanMaskSet
+                0x0000000008005866       0x12 Src/Region.o
+                0x0000000008005866                RegionChanMaskSet
  .text.RegionAdrNext
-                0x00000000080058ec       0x1c Src/Region.o
-                0x00000000080058ec                RegionAdrNext
+                0x0000000008005878       0x1c Src/Region.o
+                0x0000000008005878                RegionAdrNext
  .text.RegionComputeRxWindowParameters
-                0x0000000008005908       0x1a Src/Region.o
-                0x0000000008005908                RegionComputeRxWindowParameters
+                0x0000000008005894       0x1a Src/Region.o
+                0x0000000008005894                RegionComputeRxWindowParameters
  .text.RegionRxConfig
-                0x0000000008005922       0x14 Src/Region.o
-                0x0000000008005922                RegionRxConfig
+                0x00000000080058ae       0x14 Src/Region.o
+                0x00000000080058ae                RegionRxConfig
  .text.RegionTxConfig
-                0x0000000008005936       0x18 Src/Region.o
-                0x0000000008005936                RegionTxConfig
+                0x00000000080058c2       0x18 Src/Region.o
+                0x00000000080058c2                RegionTxConfig
  .text.RegionLinkAdrReq
-                0x000000000800594e       0x24 Src/Region.o
-                0x000000000800594e                RegionLinkAdrReq
+                0x00000000080058da       0x24 Src/Region.o
+                0x00000000080058da                RegionLinkAdrReq
  .text.RegionRxParamSetupReq
-                0x0000000008005972       0x12 Src/Region.o
-                0x0000000008005972                RegionRxParamSetupReq
+                0x00000000080058fe       0x12 Src/Region.o
+                0x00000000080058fe                RegionRxParamSetupReq
  .text.RegionNewChannelReq
-                0x0000000008005984       0x12 Src/Region.o
-                0x0000000008005984                RegionNewChannelReq
+                0x0000000008005910       0x12 Src/Region.o
+                0x0000000008005910                RegionNewChannelReq
  .text.RegionTxParamSetupReq
-                0x0000000008005996       0x12 Src/Region.o
-                0x0000000008005996                RegionTxParamSetupReq
+                0x0000000008005922       0x12 Src/Region.o
+                0x0000000008005922                RegionTxParamSetupReq
  .text.RegionDlChannelReq
-                0x00000000080059a8       0x12 Src/Region.o
-                0x00000000080059a8                RegionDlChannelReq
+                0x0000000008005934       0x12 Src/Region.o
+                0x0000000008005934                RegionDlChannelReq
  .text.RegionAlternateDr
-                0x00000000080059ba       0x12 Src/Region.o
-                0x00000000080059ba                RegionAlternateDr
+                0x0000000008005946       0x12 Src/Region.o
+                0x0000000008005946                RegionAlternateDr
  .text.RegionCalcBackOff
-                0x00000000080059cc       0x10 Src/Region.o
-                0x00000000080059cc                RegionCalcBackOff
+                0x0000000008005958       0x10 Src/Region.o
+                0x0000000008005958                RegionCalcBackOff
  .text.RegionNextChannel
-                0x00000000080059dc       0x1c Src/Region.o
-                0x00000000080059dc                RegionNextChannel
- .text.RegionChannelAdd
-                0x00000000080059f8       0x12 Src/Region.o
-                0x00000000080059f8                RegionChannelAdd
+                0x0000000008005968       0x1c Src/Region.o
+                0x0000000008005968                RegionNextChannel
  .text.RegionSetContinuousWave
-                0x0000000008005a0a       0x10 Src/Region.o
-                0x0000000008005a0a                RegionSetContinuousWave
+                0x0000000008005984       0x10 Src/Region.o
+                0x0000000008005984                RegionSetContinuousWave
  .text.RegionApplyDrOffset
-                0x0000000008005a1a       0x18 Src/Region.o
-                0x0000000008005a1a                RegionApplyDrOffset
+                0x0000000008005994       0x18 Src/Region.o
+                0x0000000008005994                RegionApplyDrOffset
  .text.CountChannels
-                0x0000000008005a32       0x24 Src/RegionCommon.o
- *fill*         0x0000000008005a56        0x2 
+                0x00000000080059ac       0x24 Src/RegionCommon.o
  .text.RegionCommonGetJoinDc
-                0x0000000008005a58       0x24 Src/RegionCommon.o
-                0x0000000008005a58                RegionCommonGetJoinDc
+                0x00000000080059d0       0x24 Src/RegionCommon.o
+                0x00000000080059d0                RegionCommonGetJoinDc
  .text.RegionCommonValueInRange
-                0x0000000008005a7c       0x14 Src/RegionCommon.o
-                0x0000000008005a7c                RegionCommonValueInRange
+                0x00000000080059f4       0x14 Src/RegionCommon.o
+                0x00000000080059f4                RegionCommonValueInRange
  .text.RegionCommonChanVerifyDr
-                0x0000000008005a90       0x74 Src/RegionCommon.o
-                0x0000000008005a90                RegionCommonChanVerifyDr
+                0x0000000008005a08       0x74 Src/RegionCommon.o
+                0x0000000008005a08                RegionCommonChanVerifyDr
  .text.RegionCommonChanDisable
-                0x0000000008005b04       0x32 Src/RegionCommon.o
-                0x0000000008005b04                RegionCommonChanDisable
+                0x0000000008005a7c       0x32 Src/RegionCommon.o
+                0x0000000008005a7c                RegionCommonChanDisable
  .text.RegionCommonCountChannels
-                0x0000000008005b36       0x2c Src/RegionCommon.o
-                0x0000000008005b36                RegionCommonCountChannels
+                0x0000000008005aae       0x2c Src/RegionCommon.o
+                0x0000000008005aae                RegionCommonCountChannels
  .text.RegionCommonChanMaskCopy
-                0x0000000008005b62       0x20 Src/RegionCommon.o
-                0x0000000008005b62                RegionCommonChanMaskCopy
+                0x0000000008005ada       0x20 Src/RegionCommon.o
+                0x0000000008005ada                RegionCommonChanMaskCopy
  .text.RegionCommonSetBandTxDone
-                0x0000000008005b82        0xc Src/RegionCommon.o
-                0x0000000008005b82                RegionCommonSetBandTxDone
+                0x0000000008005afa        0xc Src/RegionCommon.o
+                0x0000000008005afa                RegionCommonSetBandTxDone
  .text.RegionCommonUpdateBandTimeOff
-                0x0000000008005b8e       0xd2 Src/RegionCommon.o
-                0x0000000008005b8e                RegionCommonUpdateBandTimeOff
+                0x0000000008005b06       0xd2 Src/RegionCommon.o
+                0x0000000008005b06                RegionCommonUpdateBandTimeOff
  .text.RegionCommonParseLinkAdrReq
-                0x0000000008005c60       0x34 Src/RegionCommon.o
-                0x0000000008005c60                RegionCommonParseLinkAdrReq
+                0x0000000008005bd8       0x34 Src/RegionCommon.o
+                0x0000000008005bd8                RegionCommonParseLinkAdrReq
  .text.RegionCommonLinkAdrReqVerifyParams
-                0x0000000008005c94       0xa2 Src/RegionCommon.o
-                0x0000000008005c94                RegionCommonLinkAdrReqVerifyParams
- *fill*         0x0000000008005d36        0x2 
+                0x0000000008005c0c       0xa2 Src/RegionCommon.o
+                0x0000000008005c0c                RegionCommonLinkAdrReqVerifyParams
+ *fill*         0x0000000008005cae        0x2 
  .text.RegionCommonComputeSymbolTimeLoRa
-                0x0000000008005d38       0x34 Src/RegionCommon.o
-                0x0000000008005d38                RegionCommonComputeSymbolTimeLoRa
+                0x0000000008005cb0       0x34 Src/RegionCommon.o
+                0x0000000008005cb0                RegionCommonComputeSymbolTimeLoRa
  .text.RegionCommonComputeSymbolTimeFsk
-                0x0000000008005d6c       0x18 Src/RegionCommon.o
-                0x0000000008005d6c                RegionCommonComputeSymbolTimeFsk
+                0x0000000008005ce4       0x18 Src/RegionCommon.o
+                0x0000000008005ce4                RegionCommonComputeSymbolTimeFsk
  .text.RegionCommonComputeRxWindowParameters
-                0x0000000008005d84       0xa8 Src/RegionCommon.o
-                0x0000000008005d84                RegionCommonComputeRxWindowParameters
+                0x0000000008005cfc       0xa8 Src/RegionCommon.o
+                0x0000000008005cfc                RegionCommonComputeRxWindowParameters
  .text.RegionCommonComputeTxPower
-                0x0000000008005e2c       0x2a Src/RegionCommon.o
-                0x0000000008005e2c                RegionCommonComputeTxPower
+                0x0000000008005da4       0x2a Src/RegionCommon.o
+                0x0000000008005da4                RegionCommonComputeTxPower
  .text.RegionCommonCalcBackOff
-                0x0000000008005e56       0x70 Src/RegionCommon.o
-                0x0000000008005e56                RegionCommonCalcBackOff
+                0x0000000008005dce       0x70 Src/RegionCommon.o
+                0x0000000008005dce                RegionCommonCalcBackOff
  .text.GetNextLowerTxDr
-                0x0000000008005ec6       0x12 Src/RegionEU868.o
+                0x0000000008005e3e       0x1a Src/RegionIN865.o
  .text.GetBandwidth
-                0x0000000008005ed8       0x2c Src/RegionEU868.o
+                0x0000000008005e58       0x2c Src/RegionIN865.o
  .text.LimitTxPower
-                0x0000000008005f04        0x8 Src/RegionEU868.o
+                0x0000000008005e84        0x8 Src/RegionIN865.o
  .text.VerifyTxFreq
-                0x0000000008005f0c       0xac Src/RegionEU868.o
+                0x0000000008005e8c       0x2c Src/RegionIN865.o
  .text.CountNbOfEnabledChannels
-                0x0000000008005fb8       0xba Src/RegionEU868.o
- *fill*         0x0000000008006072        0x2 
- .text.RegionEU868GetPhyParam
-                0x0000000008006074       0xc8 Src/RegionEU868.o
-                0x0000000008006074                RegionEU868GetPhyParam
- .text.RegionEU868SetBandTxDone
-                0x000000000800613c       0x28 Src/RegionEU868.o
-                0x000000000800613c                RegionEU868SetBandTxDone
- .text.RegionEU868InitDefaults
-                0x0000000008006164       0x60 Src/RegionEU868.o
-                0x0000000008006164                RegionEU868InitDefaults
- .text.RegionEU868Verify
-                0x00000000080061c4       0x8e Src/RegionEU868.o
-                0x00000000080061c4                RegionEU868Verify
- *fill*         0x0000000008006252        0x2 
- .text.RegionEU868ChanMaskSet
-                0x0000000008006254       0x34 Src/RegionEU868.o
-                0x0000000008006254                RegionEU868ChanMaskSet
- .text.RegionEU868AdrNext
-                0x0000000008006288       0x78 Src/RegionEU868.o
-                0x0000000008006288                RegionEU868AdrNext
- .text.RegionEU868ComputeRxWindowParameters
-                0x0000000008006300       0x5c Src/RegionEU868.o
-                0x0000000008006300                RegionEU868ComputeRxWindowParameters
- .text.RegionEU868RxConfig
-                0x000000000800635c       0xf8 Src/RegionEU868.o
-                0x000000000800635c                RegionEU868RxConfig
- .text.RegionEU868TxConfig
-                0x0000000008006454      0x108 Src/RegionEU868.o
-                0x0000000008006454                RegionEU868TxConfig
- .text.RegionEU868LinkAdrReq
-                0x000000000800655c      0x15c Src/RegionEU868.o
-                0x000000000800655c                RegionEU868LinkAdrReq
- .text.RegionEU868RxParamSetupReq
-                0x00000000080066b8       0x40 Src/RegionEU868.o
-                0x00000000080066b8                RegionEU868RxParamSetupReq
- .text.RegionEU868TxParamSetupReq
-                0x00000000080066f8        0x6 Src/RegionEU868.o
-                0x00000000080066f8                RegionEU868TxParamSetupReq
- *fill*         0x00000000080066fe        0x2 
- .text.RegionEU868DlChannelReq
-                0x0000000008006700       0x4c Src/RegionEU868.o
-                0x0000000008006700                RegionEU868DlChannelReq
- .text.RegionEU868AlternateDr
-                0x000000000800674c       0x58 Src/RegionEU868.o
-                0x000000000800674c                RegionEU868AlternateDr
- .text.RegionEU868CalcBackOff
-                0x00000000080067a4       0x40 Src/RegionEU868.o
-                0x00000000080067a4                RegionEU868CalcBackOff
- .text.RegionEU868NextChannel
-                0x00000000080067e4       0xcc Src/RegionEU868.o
-                0x00000000080067e4                RegionEU868NextChannel
- .text.RegionEU868ChannelAdd
-                0x00000000080068b0       0xf0 Src/RegionEU868.o
-                0x00000000080068b0                RegionEU868ChannelAdd
- .text.RegionEU868ChannelsRemove
-                0x00000000080069a0       0x2c Src/RegionEU868.o
-                0x00000000080069a0                RegionEU868ChannelsRemove
- .text.RegionEU868ApplyCFList
-                0x00000000080069cc       0x7a Src/RegionEU868.o
-                0x00000000080069cc                RegionEU868ApplyCFList
- .text.RegionEU868NewChannelReq
-                0x0000000008006a46       0x56 Src/RegionEU868.o
-                0x0000000008006a46                RegionEU868NewChannelReq
- .text.RegionEU868SetContinuousWave
-                0x0000000008006a9c       0x54 Src/RegionEU868.o
-                0x0000000008006a9c                RegionEU868SetContinuousWave
- .text.RegionEU868ApplyDrOffset
-                0x0000000008006af0       0x10 Src/RegionEU868.o
-                0x0000000008006af0                RegionEU868ApplyDrOffset
+                0x0000000008005eb8       0xba Src/RegionIN865.o
+ *fill*         0x0000000008005f72        0x2 
+ .text.RegionIN865GetPhyParam
+                0x0000000008005f74       0xd0 Src/RegionIN865.o
+                0x0000000008005f74                RegionIN865GetPhyParam
+ .text.RegionIN865SetBandTxDone
+                0x0000000008006044       0x28 Src/RegionIN865.o
+                0x0000000008006044                RegionIN865SetBandTxDone
+ .text.RegionIN865InitDefaults
+                0x000000000800606c       0x60 Src/RegionIN865.o
+                0x000000000800606c                RegionIN865InitDefaults
+ .text.RegionIN865Verify
+                0x00000000080060cc       0x8e Src/RegionIN865.o
+                0x00000000080060cc                RegionIN865Verify
+ *fill*         0x000000000800615a        0x2 
+ .text.RegionIN865ChanMaskSet
+                0x000000000800615c       0x34 Src/RegionIN865.o
+                0x000000000800615c                RegionIN865ChanMaskSet
+ .text.RegionIN865AdrNext
+                0x0000000008006190       0x78 Src/RegionIN865.o
+                0x0000000008006190                RegionIN865AdrNext
+ .text.RegionIN865ComputeRxWindowParameters
+                0x0000000008006208       0x5c Src/RegionIN865.o
+                0x0000000008006208                RegionIN865ComputeRxWindowParameters
+ .text.RegionIN865RxConfig
+                0x0000000008006264       0xf8 Src/RegionIN865.o
+                0x0000000008006264                RegionIN865RxConfig
+ .text.RegionIN865TxConfig
+                0x000000000800635c      0x108 Src/RegionIN865.o
+                0x000000000800635c                RegionIN865TxConfig
+ .text.RegionIN865LinkAdrReq
+                0x0000000008006464      0x160 Src/RegionIN865.o
+                0x0000000008006464                RegionIN865LinkAdrReq
+ .text.RegionIN865RxParamSetupReq
+                0x00000000080065c4       0x40 Src/RegionIN865.o
+                0x00000000080065c4                RegionIN865RxParamSetupReq
+ .text.RegionIN865TxParamSetupReq
+                0x0000000008006604        0x6 Src/RegionIN865.o
+                0x0000000008006604                RegionIN865TxParamSetupReq
+ *fill*         0x000000000800660a        0x2 
+ .text.RegionIN865DlChannelReq
+                0x000000000800660c       0x4c Src/RegionIN865.o
+                0x000000000800660c                RegionIN865DlChannelReq
+ .text.RegionIN865AlternateDr
+                0x0000000008006658       0x58 Src/RegionIN865.o
+                0x0000000008006658                RegionIN865AlternateDr
+ .text.RegionIN865CalcBackOff
+                0x00000000080066b0       0x40 Src/RegionIN865.o
+                0x00000000080066b0                RegionIN865CalcBackOff
+ .text.RegionIN865NextChannel
+                0x00000000080066f0       0xcc Src/RegionIN865.o
+                0x00000000080066f0                RegionIN865NextChannel
+ .text.RegionIN865ChannelAdd
+                0x00000000080067bc       0xf0 Src/RegionIN865.o
+                0x00000000080067bc                RegionIN865ChannelAdd
+ .text.RegionIN865ChannelsRemove
+                0x00000000080068ac       0x2c Src/RegionIN865.o
+                0x00000000080068ac                RegionIN865ChannelsRemove
+ .text.RegionIN865ApplyCFList
+                0x00000000080068d8       0x7a Src/RegionIN865.o
+                0x00000000080068d8                RegionIN865ApplyCFList
+ .text.RegionIN865NewChannelReq
+                0x0000000008006952       0x56 Src/RegionIN865.o
+                0x0000000008006952                RegionIN865NewChannelReq
+ .text.RegionIN865SetContinuousWave
+                0x00000000080069a8       0x54 Src/RegionIN865.o
+                0x00000000080069a8                RegionIN865SetContinuousWave
+ .text.RegionIN865ApplyDrOffset
+                0x00000000080069fc       0x20 Src/RegionIN865.o
+                0x00000000080069fc                RegionIN865ApplyDrOffset
  .text.AdcMcuInit
-                0x0000000008006b00       0x4c Src/adc-board.o
-                0x0000000008006b00                AdcMcuInit
+                0x0000000008006a1c       0x4c Src/adc-board.o
+                0x0000000008006a1c                AdcMcuInit
  .text.AdcMcuConfig
-                0x0000000008006b4c       0x30 Src/adc-board.o
-                0x0000000008006b4c                AdcMcuConfig
+                0x0000000008006a68       0x30 Src/adc-board.o
+                0x0000000008006a68                AdcMcuConfig
  .text.AdcMcuReadChannel
-                0x0000000008006b7c       0xd8 Src/adc-board.o
-                0x0000000008006b7c                AdcMcuReadChannel
- .text.AdcInit  0x0000000008006c54       0x20 Src/adc.o
-                0x0000000008006c54                AdcInit
+                0x0000000008006a98       0xd8 Src/adc-board.o
+                0x0000000008006a98                AdcMcuReadChannel
+ .text.AdcInit  0x0000000008006b70       0x20 Src/adc.o
+                0x0000000008006b70                AdcInit
  .text.AdcDeInit
-                0x0000000008006c74        0xc Src/adc.o
-                0x0000000008006c74                AdcDeInit
+                0x0000000008006b90        0xc Src/adc.o
+                0x0000000008006b90                AdcDeInit
  .text.copy_block
-                0x0000000008006c80       0x42 Src/aes.o
+                0x0000000008006b9c       0x42 Src/aes.o
  .text.copy_block_nn
-                0x0000000008006cc2       0x16 Src/aes.o
+                0x0000000008006bde       0x16 Src/aes.o
  .text.xor_block
-                0x0000000008006cd8       0x82 Src/aes.o
+                0x0000000008006bf4       0x82 Src/aes.o
  .text.copy_and_key
-                0x0000000008006d5a       0x86 Src/aes.o
+                0x0000000008006c76       0x86 Src/aes.o
  .text.add_round_key
-                0x0000000008006de0        0x8 Src/aes.o
+                0x0000000008006cfc        0x8 Src/aes.o
  .text.shift_sub_rows
-                0x0000000008006de8       0x68 Src/aes.o
+                0x0000000008006d04       0x68 Src/aes.o
  .text.mix_sub_columns
-                0x0000000008006e50      0x1f0 Src/aes.o
+                0x0000000008006d6c      0x1f0 Src/aes.o
  .text.aes_set_key
-                0x0000000008007040      0x104 Src/aes.o
-                0x0000000008007040                aes_set_key
+                0x0000000008006f5c      0x104 Src/aes.o
+                0x0000000008006f5c                aes_set_key
  .text.aes_encrypt
-                0x0000000008007144       0x54 Src/aes.o
-                0x0000000008007144                aes_encrypt
+                0x0000000008007060       0x54 Src/aes.o
+                0x0000000008007060                aes_encrypt
  .text.OnCalibrateSystemWakeupTimeTimerEvent
-                0x0000000008007198        0xc Src/board.o
+                0x00000000080070b4        0xc Src/board.o
  .text.SystemClockConfig
-                0x00000000080071a4       0xa8 Src/board.o
+                0x00000000080070c0       0xa8 Src/board.o
  .text.SystemClockReConfig
-                0x000000000800724c       0xb4 Src/board.o
+                0x0000000008007168       0xb4 Src/board.o
  .text.CalibrateSystemWakeupTime
-                0x0000000008007300       0x40 Src/board.o
+                0x000000000800721c       0x40 Src/board.o
  .text.BoardDisableIrq
-                0x0000000008007340       0x10 Src/board.o
-                0x0000000008007340                BoardDisableIrq
+                0x000000000800725c       0x10 Src/board.o
+                0x000000000800725c                BoardDisableIrq
  .text.BoardEnableIrq
-                0x0000000008007350       0x14 Src/board.o
-                0x0000000008007350                BoardEnableIrq
+                0x000000000800726c       0x14 Src/board.o
+                0x000000000800726c                BoardEnableIrq
  .text.BoardInitPeriph
-                0x0000000008007364       0x6c Src/board.o
-                0x0000000008007364                BoardInitPeriph
+                0x0000000008007280       0x6c Src/board.o
+                0x0000000008007280                BoardInitPeriph
  .text.BoardDeInitMcu
-                0x00000000080073d0       0x68 Src/board.o
-                0x00000000080073d0                BoardDeInitMcu
+                0x00000000080072ec       0x68 Src/board.o
+                0x00000000080072ec                BoardDeInitMcu
  .text.BoardBatteryMeasureVolage
-                0x0000000008007438       0x1c Src/board.o
-                0x0000000008007438                BoardBatteryMeasureVolage
+                0x0000000008007354       0x1c Src/board.o
+                0x0000000008007354                BoardBatteryMeasureVolage
  .text.SysTick_Handler
-                0x0000000008007454        0xc Src/board.o
-                0x0000000008007454                SysTick_Handler
+                0x0000000008007370        0xc Src/board.o
+                0x0000000008007370                SysTick_Handler
  .text.GetBoardPowerSource
-                0x0000000008007460        0x4 Src/board.o
-                0x0000000008007460                GetBoardPowerSource
+                0x000000000800737c        0x4 Src/board.o
+                0x000000000800737c                GetBoardPowerSource
  .text.BoardUnusedIoInit
-                0x0000000008007464       0x42 Src/board.o
- *fill*         0x00000000080074a6        0x2 
+                0x0000000008007380       0x42 Src/board.o
+ *fill*         0x00000000080073c2        0x2 
  .text.BoardInitMcu
-                0x00000000080074a8       0x6c Src/board.o
-                0x00000000080074a8                BoardInitMcu
+                0x00000000080073c4       0x6c Src/board.o
+                0x00000000080073c4                BoardInitMcu
  .text.BoardGetBatteryLevel
-                0x0000000008007514       0x6c Src/board.o
-                0x0000000008007514                BoardGetBatteryLevel
+                0x0000000008007430       0x6c Src/board.o
+                0x0000000008007430                BoardGetBatteryLevel
  .text.AES_CMAC_Init
-                0x0000000008007580       0x1e Src/cmac.o
-                0x0000000008007580                AES_CMAC_Init
+                0x000000000800749c       0x1e Src/cmac.o
+                0x000000000800749c                AES_CMAC_Init
  .text.AES_CMAC_SetKey
-                0x000000000800759e       0x10 Src/cmac.o
-                0x000000000800759e                AES_CMAC_SetKey
+                0x00000000080074ba       0x10 Src/cmac.o
+                0x00000000080074ba                AES_CMAC_SetKey
  .text.AES_CMAC_Update
-                0x00000000080075ae       0xbc Src/cmac.o
-                0x00000000080075ae                AES_CMAC_Update
+                0x00000000080074ca       0xbc Src/cmac.o
+                0x00000000080074ca                AES_CMAC_Update
  .text.AES_CMAC_Final
-                0x000000000800766a      0x198 Src/cmac.o
-                0x000000000800766a                AES_CMAC_Final
- .text.DelayMs  0x0000000008007802        0x8 Src/delay.o
-                0x0000000008007802                DelayMs
+                0x0000000008007586      0x198 Src/cmac.o
+                0x0000000008007586                AES_CMAC_Final
+ .text.DelayMs  0x000000000800771e        0x8 Src/delay.o
+                0x000000000800771e                DelayMs
  .text.FifoNext
-                0x000000000800780a       0x10 Src/fifo.o
+                0x0000000008007726       0x10 Src/fifo.o
  .text.FifoPush
-                0x000000000800781a       0x14 Src/fifo.o
-                0x000000000800781a                FifoPush
- .text.FifoPop  0x000000000800782e       0x14 Src/fifo.o
-                0x000000000800782e                FifoPop
+                0x0000000008007736       0x14 Src/fifo.o
+                0x0000000008007736                FifoPush
+ .text.FifoPop  0x000000000800774a       0x14 Src/fifo.o
+                0x000000000800774a                FifoPop
  .text.IsFifoEmpty
-                0x0000000008007842        0xe Src/fifo.o
-                0x0000000008007842                IsFifoEmpty
+                0x000000000800775e        0xe Src/fifo.o
+                0x000000000800775e                IsFifoEmpty
  .text.IsFifoFull
-                0x0000000008007850       0x16 Src/fifo.o
-                0x0000000008007850                IsFifoFull
- *fill*         0x0000000008007866        0x2 
+                0x000000000800776c       0x16 Src/fifo.o
+                0x000000000800776c                IsFifoFull
+ *fill*         0x0000000008007782        0x2 
  .text.GpioMcuSetInterrupt
-                0x0000000008007868       0xf4 Src/gpio-board.o
-                0x0000000008007868                GpioMcuSetInterrupt
+                0x0000000008007784       0xf4 Src/gpio-board.o
+                0x0000000008007784                GpioMcuSetInterrupt
  .text.GpioMcuWrite
-                0x000000000800795c       0x18 Src/gpio-board.o
-                0x000000000800795c                GpioMcuWrite
+                0x0000000008007878       0x18 Src/gpio-board.o
+                0x0000000008007878                GpioMcuWrite
  .text.GpioMcuInit
-                0x0000000008007974      0x12c Src/gpio-board.o
-                0x0000000008007974                GpioMcuInit
+                0x0000000008007890      0x12c Src/gpio-board.o
+                0x0000000008007890                GpioMcuInit
  .text.EXTI0_IRQHandler
-                0x0000000008007aa0        0xe Src/gpio-board.o
-                0x0000000008007aa0                EXTI0_IRQHandler
+                0x00000000080079bc        0xe Src/gpio-board.o
+                0x00000000080079bc                EXTI0_IRQHandler
  .text.EXTI1_IRQHandler
-                0x0000000008007aae        0xe Src/gpio-board.o
-                0x0000000008007aae                EXTI1_IRQHandler
+                0x00000000080079ca        0xe Src/gpio-board.o
+                0x00000000080079ca                EXTI1_IRQHandler
  .text.EXTI2_IRQHandler
-                0x0000000008007abc        0xe Src/gpio-board.o
-                0x0000000008007abc                EXTI2_IRQHandler
+                0x00000000080079d8        0xe Src/gpio-board.o
+                0x00000000080079d8                EXTI2_IRQHandler
  .text.EXTI3_IRQHandler
-                0x0000000008007aca        0xe Src/gpio-board.o
-                0x0000000008007aca                EXTI3_IRQHandler
+                0x00000000080079e6        0xe Src/gpio-board.o
+                0x00000000080079e6                EXTI3_IRQHandler
  .text.EXTI4_IRQHandler
-                0x0000000008007ad8        0xe Src/gpio-board.o
-                0x0000000008007ad8                EXTI4_IRQHandler
+                0x00000000080079f4        0xe Src/gpio-board.o
+                0x00000000080079f4                EXTI4_IRQHandler
  .text.EXTI9_5_IRQHandler
-                0x0000000008007ae6       0x2a Src/gpio-board.o
-                0x0000000008007ae6                EXTI9_5_IRQHandler
+                0x0000000008007a02       0x2a Src/gpio-board.o
+                0x0000000008007a02                EXTI9_5_IRQHandler
  .text.EXTI15_10_IRQHandler
-                0x0000000008007b10       0x38 Src/gpio-board.o
-                0x0000000008007b10                EXTI15_10_IRQHandler
+                0x0000000008007a2c       0x38 Src/gpio-board.o
+                0x0000000008007a2c                EXTI15_10_IRQHandler
  .text.HAL_GPIO_EXTI_Callback
-                0x0000000008007b48       0x28 Src/gpio-board.o
-                0x0000000008007b48                HAL_GPIO_EXTI_Callback
+                0x0000000008007a64       0x28 Src/gpio-board.o
+                0x0000000008007a64                HAL_GPIO_EXTI_Callback
  .text.GpioInit
-                0x0000000008007b70       0x20 Src/gpio.o
-                0x0000000008007b70                GpioInit
+                0x0000000008007a8c       0x20 Src/gpio.o
+                0x0000000008007a8c                GpioInit
  .text.GpioSetInterrupt
-                0x0000000008007b90       0x16 Src/gpio.o
-                0x0000000008007b90                GpioSetInterrupt
+                0x0000000008007aac       0x16 Src/gpio.o
+                0x0000000008007aac                GpioSetInterrupt
  .text.GpioWrite
-                0x0000000008007ba6       0x16 Src/gpio.o
-                0x0000000008007ba6                GpioWrite
+                0x0000000008007ac2       0x16 Src/gpio.o
+                0x0000000008007ac2                GpioWrite
  .text.MlmeConfirm
-                0x0000000008007bbc       0x50 Src/main.o
+                0x0000000008007ad8       0x50 Src/main.o
  .text.OnLed2TimerEvent
-                0x0000000008007c0c       0x1c Src/main.o
+                0x0000000008007b28       0x1c Src/main.o
  .text.OnLed4TimerEvent
-                0x0000000008007c28       0x1c Src/main.o
+                0x0000000008007b44       0x1c Src/main.o
  .text.McpsIndication
-                0x0000000008007c44      0x23c Src/main.o
+                0x0000000008007b60      0x228 Src/main.o
  .text.McpsConfirm
-                0x0000000008007e80       0x2c Src/main.o
+                0x0000000008007d88       0x2c Src/main.o
  .text.OnTxNextPacketTimerEvent
-                0x0000000008007eac       0x44 Src/main.o
+                0x0000000008007db4       0x44 Src/main.o
  .text.PrepareTxFrame
-                0x0000000008007ef0      0x110 Src/main.o
+                0x0000000008007df8      0x110 Src/main.o
  .text.SendFrame
-                0x0000000008008000       0x88 Src/main.o
- .text.main     0x0000000008008088      0x23c Src/main.o
-                0x0000000008008088                main
+                0x0000000008007f08       0x88 Src/main.o
+ .text.main     0x0000000008007f90      0x178 Src/main.o
+                0x0000000008007f90                main
  .text.pb_field_iter_begin
-                0x00000000080082c4       0x22 Src/pb_common.o
-                0x00000000080082c4                pb_field_iter_begin
+                0x0000000008008108       0x22 Src/pb_common.o
+                0x0000000008008108                pb_field_iter_begin
  .text.pb_field_iter_next
-                0x00000000080082e6       0x7e Src/pb_common.o
-                0x00000000080082e6                pb_field_iter_next
+                0x000000000800812a       0x7e Src/pb_common.o
+                0x000000000800812a                pb_field_iter_next
  .text.buf_write
-                0x0000000008008364       0x1c Src/pb_encode.o
+                0x00000000080081a8       0x1c Src/pb_encode.o
  .text.encode_callback_field
-                0x0000000008008380       0x28 Src/pb_encode.o
+                0x00000000080081c4       0x28 Src/pb_encode.o
  .text.pb_const_cast
-                0x00000000080083a8        0x2 Src/pb_encode.o
+                0x00000000080081ec        0x2 Src/pb_encode.o
  .text.pb_check_proto3_default_value
-                0x00000000080083aa       0xcc Src/pb_encode.o
- *fill*         0x0000000008008476        0x2 
+                0x00000000080081ee       0xcc Src/pb_encode.o
+ *fill*         0x00000000080082ba        0x2 
  .text.pb_ostream_from_buffer
-                0x0000000008008478       0x18 Src/pb_encode.o
-                0x0000000008008478                pb_ostream_from_buffer
+                0x00000000080082bc       0x18 Src/pb_encode.o
+                0x00000000080082bc                pb_ostream_from_buffer
  .text.pb_write
-                0x0000000008008490       0x4c Src/pb_encode.o
-                0x0000000008008490                pb_write
+                0x00000000080082d4       0x4c Src/pb_encode.o
+                0x00000000080082d4                pb_write
  .text.pb_encode_varint
-                0x00000000080084dc       0x5c Src/pb_encode.o
-                0x00000000080084dc                pb_encode_varint
+                0x0000000008008320       0x5c Src/pb_encode.o
+                0x0000000008008320                pb_encode_varint
  .text.pb_enc_uvarint
-                0x0000000008008538       0x40 Src/pb_encode.o
+                0x000000000800837c       0x40 Src/pb_encode.o
  .text.pb_enc_varint
-                0x0000000008008578       0x44 Src/pb_encode.o
+                0x00000000080083bc       0x44 Src/pb_encode.o
  .text.pb_encode_svarint
-                0x00000000080085bc       0x1e Src/pb_encode.o
-                0x00000000080085bc                pb_encode_svarint
- *fill*         0x00000000080085da        0x2 
+                0x0000000008008400       0x1e Src/pb_encode.o
+                0x0000000008008400                pb_encode_svarint
+ *fill*         0x000000000800841e        0x2 
  .text.pb_enc_svarint
-                0x00000000080085dc       0x44 Src/pb_encode.o
+                0x0000000008008420       0x44 Src/pb_encode.o
  .text.pb_encode_fixed32
-                0x0000000008008620       0x30 Src/pb_encode.o
-                0x0000000008008620                pb_encode_fixed32
+                0x0000000008008464       0x30 Src/pb_encode.o
+                0x0000000008008464                pb_encode_fixed32
  .text.pb_enc_fixed32
-                0x0000000008008650        0xa Src/pb_encode.o
+                0x0000000008008494        0xa Src/pb_encode.o
  .text.pb_encode_fixed64
-                0x000000000800865a       0x4a Src/pb_encode.o
-                0x000000000800865a                pb_encode_fixed64
+                0x000000000800849e       0x4a Src/pb_encode.o
+                0x000000000800849e                pb_encode_fixed64
  .text.pb_enc_fixed64
-                0x00000000080086a4        0xa Src/pb_encode.o
+                0x00000000080084e8        0xa Src/pb_encode.o
  .text.pb_encode_tag
-                0x00000000080086ae       0x14 Src/pb_encode.o
-                0x00000000080086ae                pb_encode_tag
- *fill*         0x00000000080086c2        0x2 
+                0x00000000080084f2       0x14 Src/pb_encode.o
+                0x00000000080084f2                pb_encode_tag
+ *fill*         0x0000000008008506        0x2 
  .text.pb_encode_tag_for_field
-                0x00000000080086c4       0x44 Src/pb_encode.o
-                0x00000000080086c4                pb_encode_tag_for_field
+                0x0000000008008508       0x44 Src/pb_encode.o
+                0x0000000008008508                pb_encode_tag_for_field
  .text.encode_array
-                0x0000000008008708      0x138 Src/pb_encode.o
+                0x000000000800854c      0x138 Src/pb_encode.o
  .text.encode_basic_field
-                0x0000000008008840      0x110 Src/pb_encode.o
+                0x0000000008008684      0x110 Src/pb_encode.o
  .text.encode_field
-                0x0000000008008950       0x30 Src/pb_encode.o
+                0x0000000008008794       0x30 Src/pb_encode.o
  .text.default_extension_encoder
-                0x0000000008008980       0x24 Src/pb_encode.o
+                0x00000000080087c4       0x24 Src/pb_encode.o
  .text.encode_extension_field
-                0x00000000080089a4       0x2a Src/pb_encode.o
+                0x00000000080087e8       0x2a Src/pb_encode.o
  .text.pb_encode
-                0x00000000080089ce       0x58 Src/pb_encode.o
-                0x00000000080089ce                pb_encode
+                0x0000000008008812       0x58 Src/pb_encode.o
+                0x0000000008008812                pb_encode
  .text.pb_encode_string
-                0x0000000008008a26       0x24 Src/pb_encode.o
-                0x0000000008008a26                pb_encode_string
+                0x000000000800886a       0x24 Src/pb_encode.o
+                0x000000000800886a                pb_encode_string
  .text.pb_enc_fixed_length_bytes
-                0x0000000008008a4a        0xe Src/pb_encode.o
+                0x000000000800888e        0xe Src/pb_encode.o
  .text.pb_enc_string
-                0x0000000008008a58       0x38 Src/pb_encode.o
+                0x000000000800889c       0x38 Src/pb_encode.o
  .text.pb_enc_bytes
-                0x0000000008008a90       0x3c Src/pb_encode.o
+                0x00000000080088d4       0x3c Src/pb_encode.o
  .text.pb_encode_submessage
-                0x0000000008008acc       0xa8 Src/pb_encode.o
-                0x0000000008008acc                pb_encode_submessage
+                0x0000000008008910       0xa8 Src/pb_encode.o
+                0x0000000008008910                pb_encode_submessage
  .text.pb_enc_submessage
-                0x0000000008008b74       0x20 Src/pb_encode.o
+                0x00000000080089b8       0x20 Src/pb_encode.o
  .text.RtcCheckCalendarRollOver
-                0x0000000008008b94       0x30 Src/rtc-board.o
+                0x00000000080089d8       0x30 Src/rtc-board.o
  .text.RtcGetCalendar
-                0x0000000008008bc4       0x44 Src/rtc-board.o
+                0x0000000008008a08       0x44 Src/rtc-board.o
+ *fill*         0x0000000008008a4c        0x4 
  .text.RtcComputeTimerTimeToAlarmTick
-                0x0000000008008c08      0x200 Src/rtc-board.o
+                0x0000000008008a50      0x200 Src/rtc-board.o
  .text.RtcStartWakeUpAlarm
-                0x0000000008008e08       0x8c Src/rtc-board.o
- *fill*         0x0000000008008e94        0x4 
+                0x0000000008008c50       0x8c Src/rtc-board.o
+ *fill*         0x0000000008008cdc        0x4 
  .text.RtcConvertCalendarTickToTimerTime
-                0x0000000008008e98      0x134 Src/rtc-board.o
+                0x0000000008008ce0      0x134 Src/rtc-board.o
  .text.RtcComputeWakeUpTime
-                0x0000000008008fcc       0x84 Src/rtc-board.o
- .text.RtcInit  0x0000000008009050       0xa0 Src/rtc-board.o
-                0x0000000008009050                RtcInit
+                0x0000000008008e14       0x84 Src/rtc-board.o
+ .text.RtcInit  0x0000000008008e98       0xa0 Src/rtc-board.o
+                0x0000000008008e98                RtcInit
  .text.RtcSetTimeout
-                0x00000000080090f0        0x8 Src/rtc-board.o
-                0x00000000080090f0                RtcSetTimeout
+                0x0000000008008f38        0x8 Src/rtc-board.o
+                0x0000000008008f38                RtcSetTimeout
  .text.RtcGetAdjustedTimeoutValue
-                0x00000000080090f8       0x44 Src/rtc-board.o
-                0x00000000080090f8                RtcGetAdjustedTimeoutValue
+                0x0000000008008f40       0x44 Src/rtc-board.o
+                0x0000000008008f40                RtcGetAdjustedTimeoutValue
  .text.RtcGetTimerValue
-                0x000000000800913c        0xa Src/rtc-board.o
-                0x000000000800913c                RtcGetTimerValue
- *fill*         0x0000000008009146        0x2 
+                0x0000000008008f84        0xa Src/rtc-board.o
+                0x0000000008008f84                RtcGetTimerValue
+ *fill*         0x0000000008008f8e        0x2 
  .text.RtcGetElapsedAlarmTime
-                0x0000000008009148       0x24 Src/rtc-board.o
-                0x0000000008009148                RtcGetElapsedAlarmTime
+                0x0000000008008f90       0x24 Src/rtc-board.o
+                0x0000000008008f90                RtcGetElapsedAlarmTime
  .text.RtcComputeElapsedTime
-                0x000000000800916c       0x1e Src/rtc-board.o
-                0x000000000800916c                RtcComputeElapsedTime
- *fill*         0x000000000800918a        0x2 
+                0x0000000008008fb4       0x1e Src/rtc-board.o
+                0x0000000008008fb4                RtcComputeElapsedTime
+ *fill*         0x0000000008008fd2        0x2 
  .text.RtcEnterLowPowerStopMode
-                0x000000000800918c       0x40 Src/rtc-board.o
-                0x000000000800918c                RtcEnterLowPowerStopMode
+                0x0000000008008fd4       0x40 Src/rtc-board.o
+                0x0000000008008fd4                RtcEnterLowPowerStopMode
  .text.RtcRecoverMcuStatus
-                0x00000000080091cc       0x48 Src/rtc-board.o
-                0x00000000080091cc                RtcRecoverMcuStatus
+                0x0000000008009014       0x48 Src/rtc-board.o
+                0x0000000008009014                RtcRecoverMcuStatus
  .text.BlockLowPowerDuringTask
-                0x0000000008009214       0x18 Src/rtc-board.o
-                0x0000000008009214                BlockLowPowerDuringTask
+                0x000000000800905c       0x18 Src/rtc-board.o
+                0x000000000800905c                BlockLowPowerDuringTask
  .text.RTC_Alarm_IRQHandler
-                0x000000000800922c       0x2c Src/rtc-board.o
-                0x000000000800922c                RTC_Alarm_IRQHandler
+                0x0000000008009074       0x2c Src/rtc-board.o
+                0x0000000008009074                RTC_Alarm_IRQHandler
  .text.SpiDeInit
-                0x0000000008009258       0x5a Src/spi-board.o
-                0x0000000008009258                SpiDeInit
+                0x00000000080090a0       0x5a Src/spi-board.o
+                0x00000000080090a0                SpiDeInit
  .text.SpiFormat
-                0x00000000080092b2       0x38 Src/spi-board.o
-                0x00000000080092b2                SpiFormat
- *fill*         0x00000000080092ea        0x2 
+                0x00000000080090fa       0x38 Src/spi-board.o
+                0x00000000080090fa                SpiFormat
+ *fill*         0x0000000008009132        0x2 
  .text.SpiFrequency
-                0x00000000080092ec       0x44 Src/spi-board.o
-                0x00000000080092ec                SpiFrequency
- .text.SpiInit  0x0000000008009330      0x1a4 Src/spi-board.o
-                0x0000000008009330                SpiInit
+                0x0000000008009134       0x44 Src/spi-board.o
+                0x0000000008009134                SpiFrequency
+ .text.SpiInit  0x0000000008009178      0x1a4 Src/spi-board.o
+                0x0000000008009178                SpiInit
  .text.SpiInOut
-                0x00000000080094d4       0x38 Src/spi-board.o
-                0x00000000080094d4                SpiInOut
+                0x000000000800931c       0x38 Src/spi-board.o
+                0x000000000800931c                SpiInOut
  .text.SX1272CheckRfFrequency
-                0x000000000800950c        0x4 Src/sx1272-board.o
-                0x000000000800950c                SX1272CheckRfFrequency
+                0x0000000008009354        0x4 Src/sx1272-board.o
+                0x0000000008009354                SX1272CheckRfFrequency
  .text.SX1272IoInit
-                0x0000000008009510       0x90 Src/sx1272-board.o
-                0x0000000008009510                SX1272IoInit
+                0x0000000008009358       0x90 Src/sx1272-board.o
+                0x0000000008009358                SX1272IoInit
  .text.SX1272IoIrqInit
-                0x00000000080095a0       0x60 Src/sx1272-board.o
-                0x00000000080095a0                SX1272IoIrqInit
+                0x00000000080093e8       0x60 Src/sx1272-board.o
+                0x00000000080093e8                SX1272IoIrqInit
  .text.SX1272IoDeInit
-                0x0000000008009600       0x8c Src/sx1272-board.o
-                0x0000000008009600                SX1272IoDeInit
+                0x0000000008009448       0x8c Src/sx1272-board.o
+                0x0000000008009448                SX1272IoDeInit
  .text.SX1272GetPaSelect
-                0x000000000800968c        0x4 Src/sx1272-board.o
-                0x000000000800968c                SX1272GetPaSelect
+                0x00000000080094d4        0x4 Src/sx1272-board.o
+                0x00000000080094d4                SX1272GetPaSelect
  .text.SX1272SetRfTxPower
-                0x0000000008009690       0xb8 Src/sx1272-board.o
-                0x0000000008009690                SX1272SetRfTxPower
+                0x00000000080094d8       0xb8 Src/sx1272-board.o
+                0x00000000080094d8                SX1272SetRfTxPower
  .text.SX1272AntSwInit
-                0x0000000008009748       0x34 Src/sx1272-board.o
-                0x0000000008009748                SX1272AntSwInit
+                0x0000000008009590       0x34 Src/sx1272-board.o
+                0x0000000008009590                SX1272AntSwInit
  .text.SX1272AntSwDeInit
-                0x000000000800977c       0x34 Src/sx1272-board.o
-                0x000000000800977c                SX1272AntSwDeInit
+                0x00000000080095c4       0x34 Src/sx1272-board.o
+                0x00000000080095c4                SX1272AntSwDeInit
  .text.SX1272SetAntSwLowPower
-                0x00000000080097b0       0x20 Src/sx1272-board.o
-                0x00000000080097b0                SX1272SetAntSwLowPower
+                0x00000000080095f8       0x20 Src/sx1272-board.o
+                0x00000000080095f8                SX1272SetAntSwLowPower
  .text.SX1272SetAntSw
-                0x00000000080097d0       0x34 Src/sx1272-board.o
-                0x00000000080097d0                SX1272SetAntSw
+                0x0000000008009618       0x34 Src/sx1272-board.o
+                0x0000000008009618                SX1272SetAntSw
  .text.GetFskBandwidthRegValue
-                0x0000000008009804       0x50 Src/sx1272.o
+                0x000000000800964c       0x50 Src/sx1272.o
  .text.SX1272OnDio4Irq
-                0x0000000008009854       0x20 Src/sx1272.o
-                0x0000000008009854                SX1272OnDio4Irq
+                0x000000000800969c       0x20 Src/sx1272.o
+                0x000000000800969c                SX1272OnDio4Irq
  .text.SX1272GetStatus
-                0x0000000008009874        0xc Src/sx1272.o
-                0x0000000008009874                SX1272GetStatus
+                0x00000000080096bc        0xc Src/sx1272.o
+                0x00000000080096bc                SX1272GetStatus
  .text.SX1272Reset
-                0x0000000008009880       0x40 Src/sx1272.o
-                0x0000000008009880                SX1272Reset
+                0x00000000080096c8       0x40 Src/sx1272.o
+                0x00000000080096c8                SX1272Reset
  .text.SX1272WriteBuffer
-                0x00000000080098c0       0x44 Src/sx1272.o
-                0x00000000080098c0                SX1272WriteBuffer
+                0x0000000008009708       0x44 Src/sx1272.o
+                0x0000000008009708                SX1272WriteBuffer
  .text.SX1272Write
-                0x0000000008009904       0x18 Src/sx1272.o
-                0x0000000008009904                SX1272Write
- *fill*         0x000000000800991c        0x4 
+                0x000000000800974c       0x18 Src/sx1272.o
+                0x000000000800974c                SX1272Write
+ *fill*         0x0000000008009764        0x4 
  .text.SX1272SetChannel
-                0x0000000008009920       0x4c Src/sx1272.o
-                0x0000000008009920                SX1272SetChannel
+                0x0000000008009768       0x4c Src/sx1272.o
+                0x0000000008009768                SX1272SetChannel
  .text.SX1272ReadBuffer
-                0x000000000800996c       0x48 Src/sx1272.o
-                0x000000000800996c                SX1272ReadBuffer
+                0x00000000080097b4       0x48 Src/sx1272.o
+                0x00000000080097b4                SX1272ReadBuffer
  .text.SX1272Read
-                0x00000000080099b4       0x18 Src/sx1272.o
-                0x00000000080099b4                SX1272Read
- *fill*         0x00000000080099cc        0x4 
+                0x00000000080097fc       0x18 Src/sx1272.o
+                0x00000000080097fc                SX1272Read
+ *fill*         0x0000000008009814        0x4 
  .text.SX1272GetTimeOnAir
-                0x00000000080099d0      0x244 Src/sx1272.o
-                0x00000000080099d0                SX1272GetTimeOnAir
+                0x0000000008009818      0x244 Src/sx1272.o
+                0x0000000008009818                SX1272GetTimeOnAir
  .text.SX1272ReadRssi
-                0x0000000008009c14       0x2c Src/sx1272.o
-                0x0000000008009c14                SX1272ReadRssi
+                0x0000000008009a5c       0x2c Src/sx1272.o
+                0x0000000008009a5c                SX1272ReadRssi
  .text.SX1272SetOpMode
-                0x0000000008009c40       0x32 Src/sx1272.o
-                0x0000000008009c40                SX1272SetOpMode
- *fill*         0x0000000008009c72        0x2 
+                0x0000000008009a88       0x32 Src/sx1272.o
+                0x0000000008009a88                SX1272SetOpMode
+ *fill*         0x0000000008009aba        0x2 
  .text.SX1272SetSleep
-                0x0000000008009c74       0x2c Src/sx1272.o
-                0x0000000008009c74                SX1272SetSleep
+                0x0000000008009abc       0x2c Src/sx1272.o
+                0x0000000008009abc                SX1272SetSleep
  .text.SX1272SetStby
-                0x0000000008009ca0       0x2c Src/sx1272.o
-                0x0000000008009ca0                SX1272SetStby
+                0x0000000008009ae8       0x2c Src/sx1272.o
+                0x0000000008009ae8                SX1272SetStby
  .text.SX1272SetRx
-                0x0000000008009ccc      0x178 Src/sx1272.o
-                0x0000000008009ccc                SX1272SetRx
+                0x0000000008009b14      0x178 Src/sx1272.o
+                0x0000000008009b14                SX1272SetRx
  .text.SX1272SetTx
-                0x0000000008009e44       0xb0 Src/sx1272.o
-                0x0000000008009e44                SX1272SetTx
+                0x0000000008009c8c       0xb0 Src/sx1272.o
+                0x0000000008009c8c                SX1272SetTx
  .text.SX1272StartCad
-                0x0000000008009ef4       0x38 Src/sx1272.o
-                0x0000000008009ef4                SX1272StartCad
+                0x0000000008009d3c       0x38 Src/sx1272.o
+                0x0000000008009d3c                SX1272StartCad
  .text.SX1272SetModem
-                0x0000000008009f2c       0x88 Src/sx1272.o
-                0x0000000008009f2c                SX1272SetModem
+                0x0000000008009d74       0x88 Src/sx1272.o
+                0x0000000008009d74                SX1272SetModem
  .text.SX1272Init
-                0x0000000008009fb4       0x8c Src/sx1272.o
-                0x0000000008009fb4                SX1272Init
+                0x0000000008009dfc       0x8c Src/sx1272.o
+                0x0000000008009dfc                SX1272Init
  .text.SX1272IsChannelFree
-                0x000000000800a040       0x36 Src/sx1272.o
-                0x000000000800a040                SX1272IsChannelFree
+                0x0000000008009e88       0x36 Src/sx1272.o
+                0x0000000008009e88                SX1272IsChannelFree
  .text.SX1272Random
-                0x000000000800a076       0x40 Src/sx1272.o
-                0x000000000800a076                SX1272Random
- *fill*         0x000000000800a0b6        0x2 
+                0x0000000008009ebe       0x40 Src/sx1272.o
+                0x0000000008009ebe                SX1272Random
+ *fill*         0x0000000008009efe        0x2 
  .text.SX1272SetRxConfig
-                0x000000000800a0b8      0x2c8 Src/sx1272.o
-                0x000000000800a0b8                SX1272SetRxConfig
+                0x0000000008009f00      0x2c8 Src/sx1272.o
+                0x0000000008009f00                SX1272SetRxConfig
  .text.SX1272SetTxConfig
-                0x000000000800a380      0x25c Src/sx1272.o
-                0x000000000800a380                SX1272SetTxConfig
+                0x000000000800a1c8      0x25c Src/sx1272.o
+                0x000000000800a1c8                SX1272SetTxConfig
  .text.SX1272SetTxContinuousWave
-                0x000000000800a5dc       0x94 Src/sx1272.o
-                0x000000000800a5dc                SX1272SetTxContinuousWave
+                0x000000000800a424       0x94 Src/sx1272.o
+                0x000000000800a424                SX1272SetTxContinuousWave
  .text.SX1272OnDio2Irq
-                0x000000000800a670      0x104 Src/sx1272.o
-                0x000000000800a670                SX1272OnDio2Irq
+                0x000000000800a4b8      0x104 Src/sx1272.o
+                0x000000000800a4b8                SX1272OnDio2Irq
  .text.SX1272OnDio3Irq
-                0x000000000800a774       0x54 Src/sx1272.o
-                0x000000000800a774                SX1272OnDio3Irq
+                0x000000000800a5bc       0x54 Src/sx1272.o
+                0x000000000800a5bc                SX1272OnDio3Irq
  .text.SX1272WriteFifo
-                0x000000000800a7c8        0xe Src/sx1272.o
-                0x000000000800a7c8                SX1272WriteFifo
- *fill*         0x000000000800a7d6        0x2 
+                0x000000000800a610        0xe Src/sx1272.o
+                0x000000000800a610                SX1272WriteFifo
+ *fill*         0x000000000800a61e        0x2 
  .text.SX1272Send
-                0x000000000800a7d8      0x124 Src/sx1272.o
-                0x000000000800a7d8                SX1272Send
+                0x000000000800a620      0x124 Src/sx1272.o
+                0x000000000800a620                SX1272Send
  .text.SX1272ReadFifo
-                0x000000000800a8fc        0xe Src/sx1272.o
-                0x000000000800a8fc                SX1272ReadFifo
- *fill*         0x000000000800a90a        0x2 
+                0x000000000800a744        0xe Src/sx1272.o
+                0x000000000800a744                SX1272ReadFifo
+ *fill*         0x000000000800a752        0x2 
  .text.SX1272OnDio0Irq
-                0x000000000800a90c      0x2c0 Src/sx1272.o
-                0x000000000800a90c                SX1272OnDio0Irq
+                0x000000000800a754      0x2c0 Src/sx1272.o
+                0x000000000800a754                SX1272OnDio0Irq
  .text.SX1272OnDio1Irq
-                0x000000000800abcc      0x118 Src/sx1272.o
-                0x000000000800abcc                SX1272OnDio1Irq
+                0x000000000800aa14      0x118 Src/sx1272.o
+                0x000000000800aa14                SX1272OnDio1Irq
  .text.SX1272SetMaxPayloadLength
-                0x000000000800ace4       0x34 Src/sx1272.o
-                0x000000000800ace4                SX1272SetMaxPayloadLength
+                0x000000000800ab2c       0x34 Src/sx1272.o
+                0x000000000800ab2c                SX1272SetMaxPayloadLength
  .text.SX1272SetPublicNetwork
-                0x000000000800ad18       0x2c Src/sx1272.o
-                0x000000000800ad18                SX1272SetPublicNetwork
+                0x000000000800ab60       0x2c Src/sx1272.o
+                0x000000000800ab60                SX1272SetPublicNetwork
  .text.SX1272OnTimeoutIrq
-                0x000000000800ad44       0xe8 Src/sx1272.o
-                0x000000000800ad44                SX1272OnTimeoutIrq
+                0x000000000800ab8c       0xe8 Src/sx1272.o
+                0x000000000800ab8c                SX1272OnTimeoutIrq
  .text.NMI_Handler
-                0x000000000800ae2c        0x2 Src/sysIrqHandlers.o
-                0x000000000800ae2c                NMI_Handler
+                0x000000000800ac74        0x2 Src/sysIrqHandlers.o
+                0x000000000800ac74                NMI_Handler
  .text.MemManage_Handler
-                0x000000000800ae2e        0x2 Src/sysIrqHandlers.o
-                0x000000000800ae2e                MemManage_Handler
+                0x000000000800ac76        0x2 Src/sysIrqHandlers.o
+                0x000000000800ac76                MemManage_Handler
  .text.BusFault_Handler
-                0x000000000800ae30        0x2 Src/sysIrqHandlers.o
-                0x000000000800ae30                BusFault_Handler
+                0x000000000800ac78        0x2 Src/sysIrqHandlers.o
+                0x000000000800ac78                BusFault_Handler
  .text.UsageFault_Handler
-                0x000000000800ae32        0x2 Src/sysIrqHandlers.o
-                0x000000000800ae32                UsageFault_Handler
+                0x000000000800ac7a        0x2 Src/sysIrqHandlers.o
+                0x000000000800ac7a                UsageFault_Handler
  .text.DebugMon_Handler
-                0x000000000800ae34        0x2 Src/sysIrqHandlers.o
-                0x000000000800ae34                DebugMon_Handler
- *fill*         0x000000000800ae36        0x2 
+                0x000000000800ac7c        0x2 Src/sysIrqHandlers.o
+                0x000000000800ac7c                DebugMon_Handler
+ *fill*         0x000000000800ac7e        0x2 
  .text.SystemInit
-                0x000000000800ae38       0x48 Src/system_stm32l1xx.o
-                0x000000000800ae38                SystemInit
+                0x000000000800ac80       0x48 Src/system_stm32l1xx.o
+                0x000000000800ac80                SystemInit
  .text.TimerInsertTimer
-                0x000000000800ae80       0x58 Src/timer.o
+                0x000000000800acc8       0x58 Src/timer.o
  .text.TimerExists
-                0x000000000800aed8       0x1c Src/timer.o
+                0x000000000800ad20       0x1c Src/timer.o
  .text.TimerSetTimeout
-                0x000000000800aef4       0x1c Src/timer.o
+                0x000000000800ad3c       0x1c Src/timer.o
  .text.TimerInsertNewHeadTimer
-                0x000000000800af10       0x28 Src/timer.o
+                0x000000000800ad58       0x28 Src/timer.o
  .text.TimerInit
-                0x000000000800af38        0xe Src/timer.o
-                0x000000000800af38                TimerInit
+                0x000000000800ad80        0xe Src/timer.o
+                0x000000000800ad80                TimerInit
  .text.TimerGetValue
-                0x000000000800af46        0x8 Src/timer.o
-                0x000000000800af46                TimerGetValue
- *fill*         0x000000000800af4e        0x2 
+                0x000000000800ad8e        0x8 Src/timer.o
+                0x000000000800ad8e                TimerGetValue
+ *fill*         0x000000000800ad96        0x2 
  .text.TimerStart
-                0x000000000800af50       0x68 Src/timer.o
-                0x000000000800af50                TimerStart
+                0x000000000800ad98       0x68 Src/timer.o
+                0x000000000800ad98                TimerStart
  .text.TimerIrqHandler
-                0x000000000800afb8       0x54 Src/timer.o
-                0x000000000800afb8                TimerIrqHandler
+                0x000000000800ae00       0x54 Src/timer.o
+                0x000000000800ae00                TimerIrqHandler
  .text.TimerStop
-                0x000000000800b00c       0x9c Src/timer.o
-                0x000000000800b00c                TimerStop
+                0x000000000800ae54       0x9c Src/timer.o
+                0x000000000800ae54                TimerStop
  .text.TimerSetValue
-                0x000000000800b0a8       0x10 Src/timer.o
-                0x000000000800b0a8                TimerSetValue
+                0x000000000800aef0       0x10 Src/timer.o
+                0x000000000800aef0                TimerSetValue
  .text.TimerGetCurrentTime
-                0x000000000800b0b8        0x8 Src/timer.o
-                0x000000000800b0b8                TimerGetCurrentTime
+                0x000000000800af00        0x8 Src/timer.o
+                0x000000000800af00                TimerGetCurrentTime
  .text.TimerGetElapsedTime
-                0x000000000800b0c0        0x8 Src/timer.o
-                0x000000000800b0c0                TimerGetElapsedTime
+                0x000000000800af08        0x8 Src/timer.o
+                0x000000000800af08                TimerGetElapsedTime
  .text.TimerLowPowerHandler
-                0x000000000800b0c8       0x3c Src/timer.o
-                0x000000000800b0c8                TimerLowPowerHandler
+                0x000000000800af10       0x3c Src/timer.o
+                0x000000000800af10                TimerLowPowerHandler
  .text.HAL_UART_TxCpltCallback
-                0x000000000800b104       0x3c Src/uart-board.o
-                0x000000000800b104                HAL_UART_TxCpltCallback
+                0x000000000800af4c       0x3c Src/uart-board.o
+                0x000000000800af4c                HAL_UART_TxCpltCallback
  .text.HAL_UART_RxCpltCallback
-                0x000000000800b140       0x3c Src/uart-board.o
-                0x000000000800b140                HAL_UART_RxCpltCallback
+                0x000000000800af88       0x3c Src/uart-board.o
+                0x000000000800af88                HAL_UART_RxCpltCallback
  .text.HAL_UART_ErrorCallback
-                0x000000000800b17c       0x18 Src/uart-board.o
-                0x000000000800b17c                HAL_UART_ErrorCallback
+                0x000000000800afc4       0x18 Src/uart-board.o
+                0x000000000800afc4                HAL_UART_ErrorCallback
  .text.USART1_IRQHandler
-                0x000000000800b194       0x10 Src/uart-board.o
-                0x000000000800b194                USART1_IRQHandler
- .text.rand1    0x000000000800b1a4       0x30 Src/utilities.o
-                0x000000000800b1a4                rand1
- .text.srand1   0x000000000800b1d4        0xc Src/utilities.o
-                0x000000000800b1d4                srand1
- .text.randr    0x000000000800b1e0       0x1a Src/utilities.o
-                0x000000000800b1e0                randr
- .text.memcpy1  0x000000000800b1fa       0x16 Src/utilities.o
-                0x000000000800b1fa                memcpy1
- .text.memcpyr  0x000000000800b210       0x1a Src/utilities.o
-                0x000000000800b210                memcpyr
- .text.memset1  0x000000000800b22a       0x12 Src/utilities.o
-                0x000000000800b22a                memset1
+                0x000000000800afdc       0x10 Src/uart-board.o
+                0x000000000800afdc                USART1_IRQHandler
+ .text.rand1    0x000000000800afec       0x30 Src/utilities.o
+                0x000000000800afec                rand1
+ .text.srand1   0x000000000800b01c        0xc Src/utilities.o
+                0x000000000800b01c                srand1
+ .text.randr    0x000000000800b028       0x1a Src/utilities.o
+                0x000000000800b028                randr
+ .text.memcpy1  0x000000000800b042       0x16 Src/utilities.o
+                0x000000000800b042                memcpy1
+ .text.memcpyr  0x000000000800b058       0x1a Src/utilities.o
+                0x000000000800b058                memcpyr
+ .text.memset1  0x000000000800b072       0x12 Src/utilities.o
+                0x000000000800b072                memset1
  .text.Reset_Handler
-                0x000000000800b23c       0x48 startup/startup_stm32l151xb.o
-                0x000000000800b23c                Reset_Handler
+                0x000000000800b084       0x48 startup/startup_stm32l151xb.o
+                0x000000000800b084                Reset_Handler
  .text.Default_Handler
-                0x000000000800b284        0x2 startup/startup_stm32l151xb.o
-                0x000000000800b284                HardFault_Handler
-                0x000000000800b284                TIM10_IRQHandler
-                0x000000000800b284                USB_HP_IRQHandler
-                0x000000000800b284                TIM6_IRQHandler
-                0x000000000800b284                PVD_IRQHandler
-                0x000000000800b284                PendSV_Handler
-                0x000000000800b284                I2C2_EV_IRQHandler
-                0x000000000800b284                SPI1_IRQHandler
-                0x000000000800b284                USB_FS_WKUP_IRQHandler
-                0x000000000800b284                DMA1_Channel4_IRQHandler
-                0x000000000800b284                ADC1_IRQHandler
-                0x000000000800b284                USART3_IRQHandler
-                0x000000000800b284                DMA1_Channel7_IRQHandler
-                0x000000000800b284                TIM4_IRQHandler
-                0x000000000800b284                I2C1_EV_IRQHandler
-                0x000000000800b284                DMA1_Channel6_IRQHandler
-                0x000000000800b284                TIM3_IRQHandler
-                0x000000000800b284                RCC_IRQHandler
-                0x000000000800b284                DMA1_Channel1_IRQHandler
-                0x000000000800b284                Default_Handler
-                0x000000000800b284                TIM7_IRQHandler
-                0x000000000800b284                TIM9_IRQHandler
-                0x000000000800b284                TAMPER_STAMP_IRQHandler
-                0x000000000800b284                RTC_WKUP_IRQHandler
-                0x000000000800b284                SPI2_IRQHandler
-                0x000000000800b284                SVC_Handler
-                0x000000000800b284                DMA1_Channel5_IRQHandler
-                0x000000000800b284                USB_LP_IRQHandler
-                0x000000000800b284                DMA1_Channel3_IRQHandler
-                0x000000000800b284                COMP_IRQHandler
-                0x000000000800b284                WWDG_IRQHandler
-                0x000000000800b284                TIM2_IRQHandler
-                0x000000000800b284                DAC_IRQHandler
-                0x000000000800b284                TIM11_IRQHandler
-                0x000000000800b284                USART2_IRQHandler
-                0x000000000800b284                I2C2_ER_IRQHandler
-                0x000000000800b284                DMA1_Channel2_IRQHandler
-                0x000000000800b284                FLASH_IRQHandler
-                0x000000000800b284                I2C1_ER_IRQHandler
- *fill*         0x000000000800b286        0x2 
- .text.ceil     0x000000000800b288      0x120 /home/sridhar/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libm.a(lib_a-s_ceil.o)
-                0x000000000800b288                ceil
- .text.floor    0x000000000800b3a8      0x118 /home/sridhar/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libm.a(lib_a-s_floor.o)
-                0x000000000800b3a8                floor
- .text.round    0x000000000800b4c0       0xa0 /home/sridhar/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libm.a(lib_a-s_round.o)
-                0x000000000800b4c0                round
+                0x000000000800b0cc        0x2 startup/startup_stm32l151xb.o
+                0x000000000800b0cc                HardFault_Handler
+                0x000000000800b0cc                TIM10_IRQHandler
+                0x000000000800b0cc                USB_HP_IRQHandler
+                0x000000000800b0cc                TIM6_IRQHandler
+                0x000000000800b0cc                PVD_IRQHandler
+                0x000000000800b0cc                PendSV_Handler
+                0x000000000800b0cc                I2C2_EV_IRQHandler
+                0x000000000800b0cc                SPI1_IRQHandler
+                0x000000000800b0cc                USB_FS_WKUP_IRQHandler
+                0x000000000800b0cc                DMA1_Channel4_IRQHandler
+                0x000000000800b0cc                ADC1_IRQHandler
+                0x000000000800b0cc                USART3_IRQHandler
+                0x000000000800b0cc                DMA1_Channel7_IRQHandler
+                0x000000000800b0cc                TIM4_IRQHandler
+                0x000000000800b0cc                I2C1_EV_IRQHandler
+                0x000000000800b0cc                DMA1_Channel6_IRQHandler
+                0x000000000800b0cc                TIM3_IRQHandler
+                0x000000000800b0cc                RCC_IRQHandler
+                0x000000000800b0cc                DMA1_Channel1_IRQHandler
+                0x000000000800b0cc                Default_Handler
+                0x000000000800b0cc                TIM7_IRQHandler
+                0x000000000800b0cc                TIM9_IRQHandler
+                0x000000000800b0cc                TAMPER_STAMP_IRQHandler
+                0x000000000800b0cc                RTC_WKUP_IRQHandler
+                0x000000000800b0cc                SPI2_IRQHandler
+                0x000000000800b0cc                SVC_Handler
+                0x000000000800b0cc                DMA1_Channel5_IRQHandler
+                0x000000000800b0cc                USB_LP_IRQHandler
+                0x000000000800b0cc                DMA1_Channel3_IRQHandler
+                0x000000000800b0cc                COMP_IRQHandler
+                0x000000000800b0cc                WWDG_IRQHandler
+                0x000000000800b0cc                TIM2_IRQHandler
+                0x000000000800b0cc                DAC_IRQHandler
+                0x000000000800b0cc                TIM11_IRQHandler
+                0x000000000800b0cc                USART2_IRQHandler
+                0x000000000800b0cc                I2C2_ER_IRQHandler
+                0x000000000800b0cc                DMA1_Channel2_IRQHandler
+                0x000000000800b0cc                FLASH_IRQHandler
+                0x000000000800b0cc                I2C1_ER_IRQHandler
+ *fill*         0x000000000800b0ce        0x2 
+ .text.ceil     0x000000000800b0d0      0x120 /home/sridhar/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libm.a(lib_a-s_ceil.o)
+                0x000000000800b0d0                ceil
+ .text.floor    0x000000000800b1f0      0x118 /home/sridhar/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libm.a(lib_a-s_floor.o)
+                0x000000000800b1f0                floor
+ .text.round    0x000000000800b308       0xa0 /home/sridhar/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libm.a(lib_a-s_round.o)
+                0x000000000800b308                round
  .text.__libc_init_array
-                0x000000000800b560       0x48 /home/sridhar/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-init.o)
-                0x000000000800b560                __libc_init_array
- .text.memcpy   0x000000000800b5a8       0x16 /home/sridhar/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-memcpy-stub.o)
-                0x000000000800b5a8                memcpy
- .text.memset   0x000000000800b5be       0x10 /home/sridhar/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-memset.o)
-                0x000000000800b5be                memset
+                0x000000000800b3a8       0x48 /home/sridhar/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-init.o)
+                0x000000000800b3a8                __libc_init_array
+ .text.memcpy   0x000000000800b3f0       0x16 /home/sridhar/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-memcpy-stub.o)
+                0x000000000800b3f0                memcpy
+ .text.memset   0x000000000800b406       0x10 /home/sridhar/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-memset.o)
+                0x000000000800b406                memset
  *(.glue_7)
- .glue_7        0x000000000800b5ce        0x0 linker stubs
+ .glue_7        0x000000000800b416        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x000000000800b5ce        0x0 linker stubs
+ .glue_7t       0x000000000800b416        0x0 linker stubs
  *(.eh_frame)
- *fill*         0x000000000800b5ce        0x2 
- .eh_frame      0x000000000800b5d0        0x0 /home/sridhar/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-m/crtbegin.o
+ *fill*         0x000000000800b416        0x2 
+ .eh_frame      0x000000000800b418        0x0 /home/sridhar/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-m/crtbegin.o
  *(.init)
- .init          0x000000000800b5d0        0x4 /home/sridhar/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-m/crti.o
-                0x000000000800b5d0                _init
- .init          0x000000000800b5d4        0x8 /home/sridhar/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-m/crtn.o
+ .init          0x000000000800b418        0x4 /home/sridhar/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-m/crti.o
+                0x000000000800b418                _init
+ .init          0x000000000800b41c        0x8 /home/sridhar/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-m/crtn.o
  *(.fini)
- .fini          0x000000000800b5dc        0x4 /home/sridhar/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-m/crti.o
-                0x000000000800b5dc                _fini
- .fini          0x000000000800b5e0        0x8 /home/sridhar/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-m/crtn.o
-                0x000000000800b5e8                . = ALIGN (0x4)
-                0x000000000800b5e8                _etext = .
+ .fini          0x000000000800b424        0x4 /home/sridhar/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-m/crti.o
+                0x000000000800b424                _fini
+ .fini          0x000000000800b428        0x8 /home/sridhar/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-m/crtn.o
+                0x000000000800b430                . = ALIGN (0x4)
+                0x000000000800b430                _etext = .
 
-.vfp11_veneer   0x000000000800b5e8        0x0
- .vfp11_veneer  0x000000000800b5e8        0x0 linker stubs
+.vfp11_veneer   0x000000000800b430        0x0
+ .vfp11_veneer  0x000000000800b430        0x0 linker stubs
 
-.v4_bx          0x000000000800b5e8        0x0
- .v4_bx         0x000000000800b5e8        0x0 linker stubs
+.v4_bx          0x000000000800b430        0x0
+ .v4_bx         0x000000000800b430        0x0 linker stubs
 
-.iplt           0x000000000800b5e8        0x0
- .iplt          0x000000000800b5e8        0x0 /home/sridhar/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-m/crtbegin.o
+.iplt           0x000000000800b430        0x0
+ .iplt          0x000000000800b430        0x0 /home/sridhar/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-m/crtbegin.o
 
-.rodata         0x000000000800b5e8      0x658
-                0x000000000800b5e8                . = ALIGN (0x4)
+.rodata         0x000000000800b430      0x604
+                0x000000000800b430                . = ALIGN (0x4)
  *(.rodata)
- .rodata        0x000000000800b5e8       0x10 Src/LoRaMac.o
- .rodata        0x000000000800b5f8       0x5c Src/RegionEU868.o
- .rodata        0x000000000800b654      0x300 Src/aes.o
- .rodata        0x000000000800b954       0x5c Src/main.o
- .rodata        0x000000000800b9b0       0x28 Src/pb_encode.o
- .rodata        0x000000000800b9d8       0x18 Src/rtc-board.o
- .rodata        0x000000000800b9f0       0x28 Src/sensed.pb.o
-                0x000000000800b9f0                Sensed_fields
- .rodata        0x000000000800ba18       0x5c Src/sx1272-board.o
-                0x000000000800ba18                Radio
- .rodata        0x000000000800ba74       0xe3 Src/sx1272.o
-                0x000000000800ba74                FskBandwidths
-                0x000000000800bb24                RadioRegsInit
- *fill*         0x000000000800bb57        0x1 
- .rodata        0x000000000800bb58       0x24 Src/system_stm32l1xx.o
-                0x000000000800bb58                PLLMulTable
-                0x000000000800bb64                AHBPrescTable
-                0x000000000800bb74                APBPrescTable
+ .rodata        0x000000000800b430       0x10 Src/LoRaMac.o
+ .rodata        0x000000000800b440       0x64 Src/RegionIN865.o
+ .rodata        0x000000000800b4a4      0x300 Src/aes.o
+ .rodata        0x000000000800b7a4       0x28 Src/pb_encode.o
+ .rodata        0x000000000800b7cc       0x18 Src/rtc-board.o
+ .rodata        0x000000000800b7e4       0x28 Src/sensed.pb.o
+                0x000000000800b7e4                Sensed_fields
+ .rodata        0x000000000800b80c       0x5c Src/sx1272-board.o
+                0x000000000800b80c                Radio
+ .rodata        0x000000000800b868       0xe3 Src/sx1272.o
+                0x000000000800b868                FskBandwidths
+                0x000000000800b918                RadioRegsInit
+ *fill*         0x000000000800b94b        0x1 
+ .rodata        0x000000000800b94c       0x24 Src/system_stm32l1xx.o
+                0x000000000800b94c                PLLMulTable
+                0x000000000800b958                AHBPrescTable
+                0x000000000800b968                APBPrescTable
  *(.rodata*)
  .rodata.str1.4
-                0x000000000800bb7c       0xc4 Src/pb_encode.o
+                0x000000000800b970       0xc4 Src/pb_encode.o
                                          0xc1 (size before relaxing)
-                0x000000000800bc40                . = ALIGN (0x4)
+                0x000000000800ba34                . = ALIGN (0x4)
 
-.rel.dyn        0x000000000800bc40        0x0
- .rel.iplt      0x000000000800bc40        0x0 /home/sridhar/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-m/crtbegin.o
+.rel.dyn        0x000000000800ba34        0x0
+ .rel.iplt      0x000000000800ba34        0x0 /home/sridhar/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-m/crtbegin.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
 
-.ARM            0x000000000800bc40        0x0
-                0x000000000800bc40                __exidx_start = .
+.ARM            0x000000000800ba34        0x0
+                0x000000000800ba34                __exidx_start = .
  *(.ARM.exidx*)
-                0x000000000800bc40                __exidx_end = .
+                0x000000000800ba34                __exidx_end = .
 
-.preinit_array  0x000000000800bc40        0x0
-                0x000000000800bc40                PROVIDE (__preinit_array_start, .)
+.preinit_array  0x000000000800ba34        0x0
+                0x000000000800ba34                PROVIDE (__preinit_array_start, .)
  *(.preinit_array*)
-                0x000000000800bc40                PROVIDE (__preinit_array_end, .)
+                0x000000000800ba34                PROVIDE (__preinit_array_end, .)
 
-.init_array     0x000000000800bc40        0x4
-                0x000000000800bc40                PROVIDE (__init_array_start, .)
+.init_array     0x000000000800ba34        0x4
+                0x000000000800ba34                PROVIDE (__init_array_start, .)
  *(SORT(.init_array.*))
  *(.init_array*)
- .init_array    0x000000000800bc40        0x4 /home/sridhar/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-m/crtbegin.o
-                0x000000000800bc44                PROVIDE (__init_array_end, .)
+ .init_array    0x000000000800ba34        0x4 /home/sridhar/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-m/crtbegin.o
+                0x000000000800ba38                PROVIDE (__init_array_end, .)
 
-.fini_array     0x000000000800bc44        0x4
+.fini_array     0x000000000800ba38        0x4
                 [!provide]                        PROVIDE (__fini_array_start, .)
  *(SORT(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x000000000800bc44        0x4 /home/sridhar/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-m/crtbegin.o
+ .fini_array    0x000000000800ba38        0x4 /home/sridhar/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-m/crtbegin.o
                 [!provide]                        PROVIDE (__fini_array_end, .)
-                0x000000000800bc48                _sidata = LOADADDR (.data)
+                0x000000000800ba3c                _sidata = LOADADDR (.data)
 
-.data           0x0000000020000000       0xbc load address 0x000000000800bc48
+.data           0x0000000020000000       0x7c load address 0x000000000800ba3c
                 0x0000000020000000                . = ALIGN (0x4)
                 0x0000000020000000                _sdata = .
  *(.data)
  .data          0x0000000020000000        0x3 Src/LoRaMac.o
  *fill*         0x0000000020000003        0x1 
  .data          0x0000000020000004       0x20 Src/LoRaMacCrypto.o
- .data          0x0000000020000024       0x50 Src/RegionEU868.o
- .data          0x0000000020000074        0x2 Src/board.o
- *fill*         0x0000000020000076        0x2 
- .data          0x0000000020000078       0x24 Src/main.o
- .data          0x000000002000009c       0x18 Src/sx1272.o
-                0x000000002000009c                DioIrq
- .data          0x00000000200000b4        0x4 Src/system_stm32l1xx.o
-                0x00000000200000b4                SystemCoreClock
- .data          0x00000000200000b8        0x4 Src/utilities.o
+ .data          0x0000000020000024       0x10 Src/RegionIN865.o
+ .data          0x0000000020000034        0x2 Src/board.o
+ *fill*         0x0000000020000036        0x2 
+ .data          0x0000000020000038       0x24 Src/main.o
+ .data          0x000000002000005c       0x18 Src/sx1272.o
+                0x000000002000005c                DioIrq
+ .data          0x0000000020000074        0x4 Src/system_stm32l1xx.o
+                0x0000000020000074                SystemCoreClock
+ .data          0x0000000020000078        0x4 Src/utilities.o
  *(.data*)
-                0x00000000200000bc                . = ALIGN (0x4)
-                0x00000000200000bc                _edata = .
+                0x000000002000007c                . = ALIGN (0x4)
+                0x000000002000007c                _edata = .
 
-.jcr            0x00000000200000bc        0x0 load address 0x000000000800bd04
- .jcr           0x00000000200000bc        0x0 /home/sridhar/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-m/crtbegin.o
+.jcr            0x000000002000007c        0x0 load address 0x000000000800bab8
+ .jcr           0x000000002000007c        0x0 /home/sridhar/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-m/crtbegin.o
 
-.igot.plt       0x00000000200000bc        0x0 load address 0x000000000800bd04
- .igot.plt      0x00000000200000bc        0x0 /home/sridhar/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-m/crtbegin.o
-                0x00000000200000bc                . = ALIGN (0x4)
+.igot.plt       0x000000002000007c        0x0 load address 0x000000000800bab8
+ .igot.plt      0x000000002000007c        0x0 /home/sridhar/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-m/crtbegin.o
+                0x000000002000007c                . = ALIGN (0x4)
 
-.bss            0x00000000200000bc      0xe44 load address 0x000000000800bd04
-                0x00000000200000bc                _sbss = .
-                0x00000000200000bc                __bss_start__ = _sbss
+.bss            0x000000002000007c      0xe44 load address 0x000000000800bab8
+                0x000000002000007c                _sbss = .
+                0x000000002000007c                __bss_start__ = _sbss
  *(.bss)
- .bss           0x00000000200000bc       0x1c /home/sridhar/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-m/crtbegin.o
- .bss           0x00000000200000d8      0x481 Src/LoRaMac.o
-                0x0000000020000180                TxTimeOnAir
-                0x00000000200001a4                LoRaMacState
- *fill*         0x0000000020000559        0x3 
- .bss           0x000000002000055c      0x22c Src/LoRaMacCrypto.o
- .bss           0x0000000020000788       0xc8 Src/RegionEU868.o
- .bss           0x0000000020000850        0x1 Src/adc.o
- *fill*         0x0000000020000851        0x3 
- .bss           0x0000000020000854       0x1a Src/board.o
- *fill*         0x000000002000086e        0x2 
- .bss           0x0000000020000870       0x40 Src/gpio-board.o
- .bss           0x00000000200008b0      0x146 Src/main.o
-                0x00000000200009e8                vdd
-                0x00000000200009ea                flow
-                0x00000000200009ec                timestamp
-                0x00000000200009f4                protoLen
-                0x00000000200009f5                status
- *fill*         0x00000000200009f6        0x2 
- .bss           0x00000000200009f8       0x34 Src/rtc-board.o
-                0x00000000200009fc                RtcHandle
-                0x0000000020000a24                McuWakeUpTime
-                0x0000000020000a29                NonScheduledWakeUp
- .bss           0x0000000020000a2c        0x1 Src/sx1272-board.o
- *fill*         0x0000000020000a2d        0x3 
- .bss           0x0000000020000a30      0x104 Src/sx1272.o
- .bss           0x0000000020000b34        0x5 Src/timer.o
-                0x0000000020000b38                HasLoopedThroughMain
- .bss           0x0000000020000b39        0x2 Src/uart-board.o
-                0x0000000020000b39                RxData
-                0x0000000020000b3a                TxData
+ .bss           0x000000002000007c       0x1c /home/sridhar/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-m/crtbegin.o
+ .bss           0x0000000020000098      0x481 Src/LoRaMac.o
+                0x0000000020000140                TxTimeOnAir
+                0x0000000020000164                LoRaMacState
+ *fill*         0x0000000020000519        0x3 
+ .bss           0x000000002000051c      0x22c Src/LoRaMacCrypto.o
+ .bss           0x0000000020000748       0xc8 Src/RegionIN865.o
+ .bss           0x0000000020000810        0x1 Src/adc.o
+ *fill*         0x0000000020000811        0x3 
+ .bss           0x0000000020000814       0x1a Src/board.o
+ *fill*         0x000000002000082e        0x2 
+ .bss           0x0000000020000830       0x40 Src/gpio-board.o
+ .bss           0x0000000020000870      0x146 Src/main.o
+                0x00000000200009a8                vdd
+                0x00000000200009aa                flow
+                0x00000000200009ac                timestamp
+                0x00000000200009b4                protoLen
+                0x00000000200009b5                status
+ *fill*         0x00000000200009b6        0x2 
+ .bss           0x00000000200009b8       0x34 Src/rtc-board.o
+                0x00000000200009bc                RtcHandle
+                0x00000000200009e4                McuWakeUpTime
+                0x00000000200009e9                NonScheduledWakeUp
+ .bss           0x00000000200009ec        0x1 Src/sx1272-board.o
+ *fill*         0x00000000200009ed        0x3 
+ .bss           0x00000000200009f0      0x104 Src/sx1272.o
+ .bss           0x0000000020000af4        0x5 Src/timer.o
+                0x0000000020000af8                HasLoopedThroughMain
+ .bss           0x0000000020000af9        0x2 Src/uart-board.o
+                0x0000000020000af9                RxData
+                0x0000000020000afa                TxData
  *(.bss*)
  *(COMMON)
- *fill*         0x0000000020000b3b        0x1 
- COMMON         0x0000000020000b3c        0x4 Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal.o
-                0x0000000020000b3c                uwTick
- COMMON         0x0000000020000b40       0x74 Src/LoRaMac.o
-                0x0000000020000b40                LoRaMacFlags
-                0x0000000020000b44                LoRaMacParamsDefaults
-                0x0000000020000b7c                LoRaMacParams
- COMMON         0x0000000020000bb4       0x54 Src/adc-board.o
-                0x0000000020000bb4                AdcHandle
- COMMON         0x0000000020000c08       0xd4 Src/board.o
-                0x0000000020000c08                Led2
-                0x0000000020000c14                Led3
-                0x0000000020000c20                I2c
-                0x0000000020000c8c                Uart1
-                0x0000000020000cc4                Adc
-                0x0000000020000cd0                Led4
- COMMON         0x0000000020000cdc       0x3c Src/main.o
-                0x0000000020000cdc                buffer
-                0x0000000020000cf0                stream
-                0x0000000020000d04                ComplianceTest
- COMMON         0x0000000020000d18       0x14 Src/rtc-board.o
-                0x0000000020000d18                RtcCalendarContext
- COMMON         0x0000000020000d2c       0x18 Src/sx1272-board.o
-                0x0000000020000d2c                AntTx
-                0x0000000020000d38                AntRx
- COMMON         0x0000000020000d44      0x17c Src/sx1272.o
-                0x0000000020000d44                SX1272
-                0x0000000020000e84                TxTimeoutTimer
-                0x0000000020000e98                RxTimeoutSyncWord
-                0x0000000020000eac                RxTimeoutTimer
- COMMON         0x0000000020000ec0       0x40 Src/uart-board.o
-                0x0000000020000ec0                UartHandle
-                0x0000000020000f00                . = ALIGN (0x4)
-                0x0000000020000f00                _ebss = .
-                0x0000000020000f00                __bss_end__ = _ebss
+ *fill*         0x0000000020000afb        0x1 
+ COMMON         0x0000000020000afc        0x4 Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal.o
+                0x0000000020000afc                uwTick
+ COMMON         0x0000000020000b00       0x74 Src/LoRaMac.o
+                0x0000000020000b00                LoRaMacFlags
+                0x0000000020000b04                LoRaMacParamsDefaults
+                0x0000000020000b3c                LoRaMacParams
+ COMMON         0x0000000020000b74       0x54 Src/adc-board.o
+                0x0000000020000b74                AdcHandle
+ COMMON         0x0000000020000bc8       0xd4 Src/board.o
+                0x0000000020000bc8                Led2
+                0x0000000020000bd4                Led3
+                0x0000000020000be0                I2c
+                0x0000000020000c4c                Uart1
+                0x0000000020000c84                Adc
+                0x0000000020000c90                Led4
+ COMMON         0x0000000020000c9c       0x3c Src/main.o
+                0x0000000020000c9c                buffer
+                0x0000000020000cb0                stream
+                0x0000000020000cc4                ComplianceTest
+ COMMON         0x0000000020000cd8       0x14 Src/rtc-board.o
+                0x0000000020000cd8                RtcCalendarContext
+ COMMON         0x0000000020000cec       0x18 Src/sx1272-board.o
+                0x0000000020000cec                AntTx
+                0x0000000020000cf8                AntRx
+ COMMON         0x0000000020000d04      0x17c Src/sx1272.o
+                0x0000000020000d04                SX1272
+                0x0000000020000e44                TxTimeoutTimer
+                0x0000000020000e58                RxTimeoutSyncWord
+                0x0000000020000e6c                RxTimeoutTimer
+ COMMON         0x0000000020000e80       0x40 Src/uart-board.o
+                0x0000000020000e80                UartHandle
+                0x0000000020000ec0                . = ALIGN (0x4)
+                0x0000000020000ec0                _ebss = .
+                0x0000000020000ec0                __bss_end__ = _ebss
 
 ._user_heap_stack
-                0x0000000020000f00      0x600 load address 0x000000000800bd04
-                0x0000000020000f00                . = ALIGN (0x8)
+                0x0000000020000ec0      0x600 load address 0x000000000800bab8
+                0x0000000020000ec0                . = ALIGN (0x8)
                 [!provide]                        PROVIDE (end, .)
                 [!provide]                        PROVIDE (_end, .)
-                0x0000000020001100                . = (. + _Min_Heap_Size)
- *fill*         0x0000000020000f00      0x200 
-                0x0000000020001500                . = (. + _Min_Stack_Size)
- *fill*         0x0000000020001100      0x400 
-                0x0000000020001500                . = ALIGN (0x8)
+                0x00000000200010c0                . = (. + _Min_Heap_Size)
+ *fill*         0x0000000020000ec0      0x200 
+                0x00000000200014c0                . = (. + _Min_Stack_Size)
+ *fill*         0x00000000200010c0      0x400 
+                0x00000000200014c0                . = ALIGN (0x8)
 
 /DISCARD/
  libc.a(*)
@@ -13164,7 +13160,7 @@ LOAD /home/sridhar/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none
  .ARM.attributes
                 0x00000000000003ad       0x33 Src/RegionCommon.o
  .ARM.attributes
-                0x00000000000003e0       0x33 Src/RegionEU868.o
+                0x00000000000003e0       0x33 Src/RegionIN865.o
  .ARM.attributes
                 0x0000000000000413       0x33 Src/adc-board.o
  .ARM.attributes
@@ -13239,7 +13235,7 @@ LOAD /home/sridhar/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none
                 0x0000000000000a52       0x1d /home/sridhar/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-m/crtn.o
 OUTPUT(flowsensor.elf elf32-littlearm)
 
-.debug_info     0x0000000000000000    0x47978
+.debug_info     0x0000000000000000    0x47888
  .debug_info    0x0000000000000000      0xe94 Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal.o
  .debug_info    0x0000000000000e94     0x189b Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_adc.o
  .debug_info    0x000000000000272f     0x1627 Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_cortex.o
@@ -13254,36 +13250,36 @@ OUTPUT(flowsensor.elf elf32-littlearm)
  .debug_info    0x000000000000cab6     0x1dec Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_spi.o
  .debug_info    0x000000000000e8a2      0xe47 Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_spi_ex.o
  .debug_info    0x000000000000f6e9     0x1a2b Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_uart.o
- .debug_info    0x0000000000011114     0x573d Src/LoRaMac.o
- .debug_info    0x0000000000016851     0x108d Src/LoRaMacCrypto.o
- .debug_info    0x00000000000178de     0x1c96 Src/Region.o
- .debug_info    0x0000000000019574     0x135f Src/RegionCommon.o
- .debug_info    0x000000000001a8d3     0x3963 Src/RegionEU868.o
- .debug_info    0x000000000001e236     0x23d6 Src/adc-board.o
- .debug_info    0x000000000002060c     0x1e00 Src/adc.o
- .debug_info    0x000000000002240c      0xde7 Src/aes.o
- .debug_info    0x00000000000231f3     0x2b7f Src/board.o
- .debug_info    0x0000000000025d72      0x52f Src/cmac.o
- .debug_info    0x00000000000262a1     0x1d72 Src/delay.o
- .debug_info    0x0000000000028013      0x277 Src/fifo.o
- .debug_info    0x000000000002828a     0x2693 Src/gpio-board.o
- .debug_info    0x000000000002a91d     0x1faa Src/gpio.o
- .debug_info    0x000000000002c8c7     0x3486 Src/main.o
- .debug_info    0x000000000002fd4d      0xaf1 Src/pb_common.o
- .debug_info    0x000000000003083e     0x1ec9 Src/pb_encode.o
- .debug_info    0x0000000000032707     0x2e33 Src/rtc-board.o
- .debug_info    0x000000000003553a      0x9e3 Src/sensed.pb.o
- .debug_info    0x0000000000035f1d     0x2377 Src/spi-board.o
- .debug_info    0x0000000000038294     0x2498 Src/sx1272-board.o
- .debug_info    0x000000000003a72c     0x3f59 Src/sx1272.o
- .debug_info    0x000000000003e685     0x1d53 Src/sysIrqHandlers.o
- .debug_info    0x00000000000403d8      0xc7d Src/system_stm32l1xx.o
- .debug_info    0x0000000000041055     0x228f Src/timer.o
- .debug_info    0x00000000000432e4     0x2796 Src/uart-board.o
- .debug_info    0x0000000000045a7a     0x1e7c Src/utilities.o
- .debug_info    0x00000000000478f6       0x82 startup/startup_stm32l151xb.o
+ .debug_info    0x0000000000011114     0x5726 Src/LoRaMac.o
+ .debug_info    0x000000000001683a     0x108d Src/LoRaMacCrypto.o
+ .debug_info    0x00000000000178c7     0x1cc1 Src/Region.o
+ .debug_info    0x0000000000019588     0x135f Src/RegionCommon.o
+ .debug_info    0x000000000001a8e7     0x397e Src/RegionIN865.o
+ .debug_info    0x000000000001e265     0x23d6 Src/adc-board.o
+ .debug_info    0x000000000002063b     0x1e00 Src/adc.o
+ .debug_info    0x000000000002243b      0xde7 Src/aes.o
+ .debug_info    0x0000000000023222     0x2b7f Src/board.o
+ .debug_info    0x0000000000025da1      0x52f Src/cmac.o
+ .debug_info    0x00000000000262d0     0x1d72 Src/delay.o
+ .debug_info    0x0000000000028042      0x277 Src/fifo.o
+ .debug_info    0x00000000000282b9     0x2693 Src/gpio-board.o
+ .debug_info    0x000000000002a94c     0x1faa Src/gpio.o
+ .debug_info    0x000000000002c8f6     0x3367 Src/main.o
+ .debug_info    0x000000000002fc5d      0xaf1 Src/pb_common.o
+ .debug_info    0x000000000003074e     0x1ec9 Src/pb_encode.o
+ .debug_info    0x0000000000032617     0x2e33 Src/rtc-board.o
+ .debug_info    0x000000000003544a      0x9e3 Src/sensed.pb.o
+ .debug_info    0x0000000000035e2d     0x2377 Src/spi-board.o
+ .debug_info    0x00000000000381a4     0x2498 Src/sx1272-board.o
+ .debug_info    0x000000000003a63c     0x3f59 Src/sx1272.o
+ .debug_info    0x000000000003e595     0x1d53 Src/sysIrqHandlers.o
+ .debug_info    0x00000000000402e8      0xc7d Src/system_stm32l1xx.o
+ .debug_info    0x0000000000040f65     0x228f Src/timer.o
+ .debug_info    0x00000000000431f4     0x2796 Src/uart-board.o
+ .debug_info    0x000000000004598a     0x1e7c Src/utilities.o
+ .debug_info    0x0000000000047806       0x82 startup/startup_stm32l151xb.o
 
-.debug_abbrev   0x0000000000000000     0x747f
+.debug_abbrev   0x0000000000000000     0x7490
  .debug_abbrev  0x0000000000000000      0x2c7 Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal.o
  .debug_abbrev  0x00000000000002c7      0x33a Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_adc.o
  .debug_abbrev  0x0000000000000601      0x3b8 Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_cortex.o
@@ -13300,34 +13296,34 @@ OUTPUT(flowsensor.elf elf32-littlearm)
  .debug_abbrev  0x0000000000002459      0x2fb Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_uart.o
  .debug_abbrev  0x0000000000002754      0x442 Src/LoRaMac.o
  .debug_abbrev  0x0000000000002b96      0x268 Src/LoRaMacCrypto.o
- .debug_abbrev  0x0000000000002dfe      0x28f Src/Region.o
- .debug_abbrev  0x000000000000308d      0x362 Src/RegionCommon.o
- .debug_abbrev  0x00000000000033ef      0x41c Src/RegionEU868.o
- .debug_abbrev  0x000000000000380b      0x317 Src/adc-board.o
- .debug_abbrev  0x0000000000003b22      0x271 Src/adc.o
- .debug_abbrev  0x0000000000003d93      0x271 Src/aes.o
- .debug_abbrev  0x0000000000004004      0x41d Src/board.o
- .debug_abbrev  0x0000000000004421      0x159 Src/cmac.o
- .debug_abbrev  0x000000000000457a      0x259 Src/delay.o
- .debug_abbrev  0x00000000000047d3      0x102 Src/fifo.o
- .debug_abbrev  0x00000000000048d5      0x30c Src/gpio-board.o
- .debug_abbrev  0x0000000000004be1      0x279 Src/gpio.o
- .debug_abbrev  0x0000000000004e5a      0x3b6 Src/main.o
- .debug_abbrev  0x0000000000005210      0x227 Src/pb_common.o
- .debug_abbrev  0x0000000000005437      0x374 Src/pb_encode.o
- .debug_abbrev  0x00000000000057ab      0x464 Src/rtc-board.o
- .debug_abbrev  0x0000000000005c0f      0x1a0 Src/sensed.pb.o
- .debug_abbrev  0x0000000000005daf      0x2d8 Src/spi-board.o
- .debug_abbrev  0x0000000000006087      0x2b5 Src/sx1272-board.o
- .debug_abbrev  0x000000000000633c      0x456 Src/sx1272.o
- .debug_abbrev  0x0000000000006792      0x1fb Src/sysIrqHandlers.o
- .debug_abbrev  0x000000000000698d      0x205 Src/system_stm32l1xx.o
- .debug_abbrev  0x0000000000006b92      0x39a Src/timer.o
- .debug_abbrev  0x0000000000006f2c      0x2c7 Src/uart-board.o
- .debug_abbrev  0x00000000000071f3      0x27a Src/utilities.o
- .debug_abbrev  0x000000000000746d       0x12 startup/startup_stm32l151xb.o
+ .debug_abbrev  0x0000000000002dfe      0x2a0 Src/Region.o
+ .debug_abbrev  0x000000000000309e      0x362 Src/RegionCommon.o
+ .debug_abbrev  0x0000000000003400      0x41c Src/RegionIN865.o
+ .debug_abbrev  0x000000000000381c      0x317 Src/adc-board.o
+ .debug_abbrev  0x0000000000003b33      0x271 Src/adc.o
+ .debug_abbrev  0x0000000000003da4      0x271 Src/aes.o
+ .debug_abbrev  0x0000000000004015      0x41d Src/board.o
+ .debug_abbrev  0x0000000000004432      0x159 Src/cmac.o
+ .debug_abbrev  0x000000000000458b      0x259 Src/delay.o
+ .debug_abbrev  0x00000000000047e4      0x102 Src/fifo.o
+ .debug_abbrev  0x00000000000048e6      0x30c Src/gpio-board.o
+ .debug_abbrev  0x0000000000004bf2      0x279 Src/gpio.o
+ .debug_abbrev  0x0000000000004e6b      0x3b6 Src/main.o
+ .debug_abbrev  0x0000000000005221      0x227 Src/pb_common.o
+ .debug_abbrev  0x0000000000005448      0x374 Src/pb_encode.o
+ .debug_abbrev  0x00000000000057bc      0x464 Src/rtc-board.o
+ .debug_abbrev  0x0000000000005c20      0x1a0 Src/sensed.pb.o
+ .debug_abbrev  0x0000000000005dc0      0x2d8 Src/spi-board.o
+ .debug_abbrev  0x0000000000006098      0x2b5 Src/sx1272-board.o
+ .debug_abbrev  0x000000000000634d      0x456 Src/sx1272.o
+ .debug_abbrev  0x00000000000067a3      0x1fb Src/sysIrqHandlers.o
+ .debug_abbrev  0x000000000000699e      0x205 Src/system_stm32l1xx.o
+ .debug_abbrev  0x0000000000006ba3      0x39a Src/timer.o
+ .debug_abbrev  0x0000000000006f3d      0x2c7 Src/uart-board.o
+ .debug_abbrev  0x0000000000007204      0x27a Src/utilities.o
+ .debug_abbrev  0x000000000000747e       0x12 startup/startup_stm32l151xb.o
 
-.debug_loc      0x0000000000000000    0x1037f
+.debug_loc      0x0000000000000000    0x103aa
  .debug_loc     0x0000000000000000       0x6a Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal.o
  .debug_loc     0x000000000000006a      0x840 Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_adc.o
  .debug_loc     0x00000000000008aa      0x5ad Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_cortex.o
@@ -13345,27 +13341,27 @@ OUTPUT(flowsensor.elf elf32-littlearm)
  .debug_loc     0x000000000000858c      0x552 Src/LoRaMacCrypto.o
  .debug_loc     0x0000000000008ade      0x96e Src/Region.o
  .debug_loc     0x000000000000944c      0x96e Src/RegionCommon.o
- .debug_loc     0x0000000000009dba     0x101b Src/RegionEU868.o
- .debug_loc     0x000000000000add5      0x10a Src/adc-board.o
- .debug_loc     0x000000000000aedf       0xcf Src/adc.o
- .debug_loc     0x000000000000afae      0x47f Src/aes.o
- .debug_loc     0x000000000000b42d      0x11d Src/board.o
- .debug_loc     0x000000000000b54a      0x22a Src/cmac.o
- .debug_loc     0x000000000000b774       0x44 Src/delay.o
- .debug_loc     0x000000000000b7b8       0xde Src/fifo.o
- .debug_loc     0x000000000000b896      0x51f Src/gpio-board.o
- .debug_loc     0x000000000000bdb5      0x2f8 Src/gpio.o
- .debug_loc     0x000000000000c0ad      0x184 Src/main.o
- .debug_loc     0x000000000000c231      0x175 Src/pb_common.o
- .debug_loc     0x000000000000c3a6     0x17e4 Src/pb_encode.o
- .debug_loc     0x000000000000db8a      0x8a9 Src/rtc-board.o
- .debug_loc     0x000000000000e433      0x26c Src/spi-board.o
- .debug_loc     0x000000000000e69f      0x1d3 Src/sx1272-board.o
- .debug_loc     0x000000000000e872      0xe81 Src/sx1272.o
- .debug_loc     0x000000000000f6f3      0x18f Src/system_stm32l1xx.o
- .debug_loc     0x000000000000f882      0x577 Src/timer.o
- .debug_loc     0x000000000000fdf9      0x379 Src/uart-board.o
- .debug_loc     0x0000000000010172      0x20d Src/utilities.o
+ .debug_loc     0x0000000000009dba     0x1046 Src/RegionIN865.o
+ .debug_loc     0x000000000000ae00      0x10a Src/adc-board.o
+ .debug_loc     0x000000000000af0a       0xcf Src/adc.o
+ .debug_loc     0x000000000000afd9      0x47f Src/aes.o
+ .debug_loc     0x000000000000b458      0x11d Src/board.o
+ .debug_loc     0x000000000000b575      0x22a Src/cmac.o
+ .debug_loc     0x000000000000b79f       0x44 Src/delay.o
+ .debug_loc     0x000000000000b7e3       0xde Src/fifo.o
+ .debug_loc     0x000000000000b8c1      0x51f Src/gpio-board.o
+ .debug_loc     0x000000000000bde0      0x2f8 Src/gpio.o
+ .debug_loc     0x000000000000c0d8      0x184 Src/main.o
+ .debug_loc     0x000000000000c25c      0x175 Src/pb_common.o
+ .debug_loc     0x000000000000c3d1     0x17e4 Src/pb_encode.o
+ .debug_loc     0x000000000000dbb5      0x8a9 Src/rtc-board.o
+ .debug_loc     0x000000000000e45e      0x26c Src/spi-board.o
+ .debug_loc     0x000000000000e6ca      0x1d3 Src/sx1272-board.o
+ .debug_loc     0x000000000000e89d      0xe81 Src/sx1272.o
+ .debug_loc     0x000000000000f71e      0x18f Src/system_stm32l1xx.o
+ .debug_loc     0x000000000000f8ad      0x577 Src/timer.o
+ .debug_loc     0x000000000000fe24      0x379 Src/uart-board.o
+ .debug_loc     0x000000000001019d      0x20d Src/utilities.o
 
 .debug_aranges  0x0000000000000000     0x15e8
  .debug_aranges
@@ -13405,7 +13401,7 @@ OUTPUT(flowsensor.elf elf32-littlearm)
  .debug_aranges
                 0x0000000000000b58       0x98 Src/RegionCommon.o
  .debug_aranges
-                0x0000000000000bf0       0xf0 Src/RegionEU868.o
+                0x0000000000000bf0       0xf0 Src/RegionIN865.o
  .debug_aranges
                 0x0000000000000ce0       0x30 Src/adc-board.o
  .debug_aranges
@@ -13472,7 +13468,7 @@ OUTPUT(flowsensor.elf elf32-littlearm)
  .debug_ranges  0x0000000000000a40       0x38 Src/LoRaMacCrypto.o
  .debug_ranges  0x0000000000000a78       0xc0 Src/Region.o
  .debug_ranges  0x0000000000000b38       0xd8 Src/RegionCommon.o
- .debug_ranges  0x0000000000000c10      0x100 Src/RegionEU868.o
+ .debug_ranges  0x0000000000000c10      0x100 Src/RegionIN865.o
  .debug_ranges  0x0000000000000d10       0x20 Src/adc-board.o
  .debug_ranges  0x0000000000000d30       0x20 Src/adc.o
  .debug_ranges  0x0000000000000d50       0x70 Src/aes.o
@@ -13496,7 +13492,7 @@ OUTPUT(flowsensor.elf elf32-littlearm)
  .debug_ranges  0x0000000000001518       0x40 Src/utilities.o
  .debug_ranges  0x0000000000001558       0x20 startup/startup_stm32l151xb.o
 
-.debug_macro    0x0000000000000000    0x1f0e3
+.debug_macro    0x0000000000000000    0x1f087
  .debug_macro   0x0000000000000000      0x36e Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal.o
  .debug_macro   0x000000000000036e      0x8c8 Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal.o
  .debug_macro   0x0000000000000c36       0xa6 Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal.o
@@ -13601,39 +13597,39 @@ OUTPUT(flowsensor.elf elf32-littlearm)
  .debug_macro   0x0000000000018da9      0x770 Src/Region.o
  .debug_macro   0x0000000000019519      0x174 Src/Region.o
  .debug_macro   0x000000000001968d       0x10 Src/Region.o
- .debug_macro   0x000000000001969d      0x109 Src/Region.o
- .debug_macro   0x00000000000197a6      0x169 Src/RegionCommon.o
- .debug_macro   0x000000000001990f      0x1e1 Src/RegionCommon.o
- .debug_macro   0x0000000000019af0      0x4aa Src/RegionEU868.o
- .debug_macro   0x0000000000019f9a      0x466 Src/adc-board.o
- .debug_macro   0x000000000001a400      0x466 Src/adc.o
- .debug_macro   0x000000000001a866      0x1bb Src/aes.o
- .debug_macro   0x000000000001aa21      0x4b3 Src/board.o
- .debug_macro   0x000000000001aed4       0x94 Src/cmac.o
- .debug_macro   0x000000000001af68      0x462 Src/delay.o
- .debug_macro   0x000000000001b3ca       0x76 Src/fifo.o
- .debug_macro   0x000000000001b440      0x46c Src/gpio-board.o
- .debug_macro   0x000000000001b8ac      0x46c Src/gpio.o
- .debug_macro   0x000000000001bd18      0x54e Src/main.o
- .debug_macro   0x000000000001c266       0x40 Src/main.o
- .debug_macro   0x000000000001c2a6       0x10 Src/main.o
- .debug_macro   0x000000000001c2b6      0x273 Src/main.o
- .debug_macro   0x000000000001c529       0x28 Src/main.o
- .debug_macro   0x000000000001c551       0xd0 Src/main.o
- .debug_macro   0x000000000001c621      0x140 Src/pb_common.o
- .debug_macro   0x000000000001c761      0x166 Src/pb_encode.o
- .debug_macro   0x000000000001c8c7      0x48b Src/rtc-board.o
- .debug_macro   0x000000000001cd52      0x145 Src/sensed.pb.o
- .debug_macro   0x000000000001ce97      0x466 Src/spi-board.o
- .debug_macro   0x000000000001d2fd      0x46e Src/sx1272-board.o
- .debug_macro   0x000000000001d76b      0x488 Src/sx1272.o
- .debug_macro   0x000000000001dbf3      0x462 Src/sysIrqHandlers.o
- .debug_macro   0x000000000001e055      0x350 Src/system_stm32l1xx.o
- .debug_macro   0x000000000001e3a5      0x466 Src/timer.o
- .debug_macro   0x000000000001e80b      0x46c Src/uart-board.o
- .debug_macro   0x000000000001ec77      0x46c Src/utilities.o
+ .debug_macro   0x000000000001969d       0xed Src/Region.o
+ .debug_macro   0x000000000001978a      0x169 Src/RegionCommon.o
+ .debug_macro   0x00000000000198f3      0x1e1 Src/RegionCommon.o
+ .debug_macro   0x0000000000019ad4      0x4aa Src/RegionIN865.o
+ .debug_macro   0x0000000000019f7e      0x466 Src/adc-board.o
+ .debug_macro   0x000000000001a3e4      0x466 Src/adc.o
+ .debug_macro   0x000000000001a84a      0x1bb Src/aes.o
+ .debug_macro   0x000000000001aa05      0x4b3 Src/board.o
+ .debug_macro   0x000000000001aeb8       0x94 Src/cmac.o
+ .debug_macro   0x000000000001af4c      0x462 Src/delay.o
+ .debug_macro   0x000000000001b3ae       0x76 Src/fifo.o
+ .debug_macro   0x000000000001b424      0x46c Src/gpio-board.o
+ .debug_macro   0x000000000001b890      0x46c Src/gpio.o
+ .debug_macro   0x000000000001bcfc      0x50e Src/main.o
+ .debug_macro   0x000000000001c20a       0x40 Src/main.o
+ .debug_macro   0x000000000001c24a       0x10 Src/main.o
+ .debug_macro   0x000000000001c25a      0x273 Src/main.o
+ .debug_macro   0x000000000001c4cd       0x28 Src/main.o
+ .debug_macro   0x000000000001c4f5       0xd0 Src/main.o
+ .debug_macro   0x000000000001c5c5      0x140 Src/pb_common.o
+ .debug_macro   0x000000000001c705      0x166 Src/pb_encode.o
+ .debug_macro   0x000000000001c86b      0x48b Src/rtc-board.o
+ .debug_macro   0x000000000001ccf6      0x145 Src/sensed.pb.o
+ .debug_macro   0x000000000001ce3b      0x466 Src/spi-board.o
+ .debug_macro   0x000000000001d2a1      0x46e Src/sx1272-board.o
+ .debug_macro   0x000000000001d70f      0x488 Src/sx1272.o
+ .debug_macro   0x000000000001db97      0x462 Src/sysIrqHandlers.o
+ .debug_macro   0x000000000001dff9      0x350 Src/system_stm32l1xx.o
+ .debug_macro   0x000000000001e349      0x466 Src/timer.o
+ .debug_macro   0x000000000001e7af      0x46c Src/uart-board.o
+ .debug_macro   0x000000000001ec1b      0x46c Src/utilities.o
 
-.debug_line     0x0000000000000000    0x1a497
+.debug_line     0x0000000000000000    0x1a48f
  .debug_line    0x0000000000000000      0x9c3 Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal.o
  .debug_line    0x00000000000009c3      0xd1d Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_adc.o
  .debug_line    0x00000000000016e0      0xa49 Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_cortex.o
@@ -13648,36 +13644,36 @@ OUTPUT(flowsensor.elf elf32-littlearm)
  .debug_line    0x0000000000007932     0x114a Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_spi.o
  .debug_line    0x0000000000008a7c      0x8a0 Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_spi_ex.o
  .debug_line    0x000000000000931c      0xf4b Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_uart.o
- .debug_line    0x000000000000a267     0x1528 Src/LoRaMac.o
- .debug_line    0x000000000000b78f      0x4bf Src/LoRaMacCrypto.o
- .debug_line    0x000000000000bc4e      0x60b Src/Region.o
- .debug_line    0x000000000000c259      0x642 Src/RegionCommon.o
- .debug_line    0x000000000000c89b      0xdf7 Src/RegionEU868.o
- .debug_line    0x000000000000d692      0xa3d Src/adc-board.o
- .debug_line    0x000000000000e0cf      0x9e0 Src/adc.o
- .debug_line    0x000000000000eaaf      0x533 Src/aes.o
- .debug_line    0x000000000000efe2      0xbb2 Src/board.o
- .debug_line    0x000000000000fb94      0x438 Src/cmac.o
- .debug_line    0x000000000000ffcc      0x9c9 Src/delay.o
- .debug_line    0x0000000000010995      0x3b1 Src/fifo.o
- .debug_line    0x0000000000010d46      0xb56 Src/gpio-board.o
- .debug_line    0x000000000001189c      0xa37 Src/gpio.o
- .debug_line    0x00000000000122d3      0xc51 Src/main.o
- .debug_line    0x0000000000012f24      0x457 Src/pb_common.o
- .debug_line    0x000000000001337b      0x86e Src/pb_encode.o
- .debug_line    0x0000000000013be9      0xc57 Src/rtc-board.o
- .debug_line    0x0000000000014840      0x3e1 Src/sensed.pb.o
- .debug_line    0x0000000000014c21      0xa59 Src/spi-board.o
- .debug_line    0x000000000001567a      0xa9f Src/sx1272-board.o
- .debug_line    0x0000000000016119      0xff9 Src/sx1272.o
- .debug_line    0x0000000000017112      0xa01 Src/sysIrqHandlers.o
- .debug_line    0x0000000000017b13      0x894 Src/system_stm32l1xx.o
- .debug_line    0x00000000000183a7      0xb6f Src/timer.o
- .debug_line    0x0000000000018f16      0xacc Src/uart-board.o
- .debug_line    0x00000000000199e2      0xa38 Src/utilities.o
- .debug_line    0x000000000001a41a       0x7d startup/startup_stm32l151xb.o
+ .debug_line    0x000000000000a267     0x1527 Src/LoRaMac.o
+ .debug_line    0x000000000000b78e      0x4bf Src/LoRaMacCrypto.o
+ .debug_line    0x000000000000bc4d      0x633 Src/Region.o
+ .debug_line    0x000000000000c280      0x642 Src/RegionCommon.o
+ .debug_line    0x000000000000c8c2      0xdea Src/RegionIN865.o
+ .debug_line    0x000000000000d6ac      0xa3d Src/adc-board.o
+ .debug_line    0x000000000000e0e9      0x9e0 Src/adc.o
+ .debug_line    0x000000000000eac9      0x533 Src/aes.o
+ .debug_line    0x000000000000effc      0xbb2 Src/board.o
+ .debug_line    0x000000000000fbae      0x438 Src/cmac.o
+ .debug_line    0x000000000000ffe6      0x9c9 Src/delay.o
+ .debug_line    0x00000000000109af      0x3b1 Src/fifo.o
+ .debug_line    0x0000000000010d60      0xb56 Src/gpio-board.o
+ .debug_line    0x00000000000118b6      0xa37 Src/gpio.o
+ .debug_line    0x00000000000122ed      0xc2f Src/main.o
+ .debug_line    0x0000000000012f1c      0x457 Src/pb_common.o
+ .debug_line    0x0000000000013373      0x86e Src/pb_encode.o
+ .debug_line    0x0000000000013be1      0xc57 Src/rtc-board.o
+ .debug_line    0x0000000000014838      0x3e1 Src/sensed.pb.o
+ .debug_line    0x0000000000014c19      0xa59 Src/spi-board.o
+ .debug_line    0x0000000000015672      0xa9f Src/sx1272-board.o
+ .debug_line    0x0000000000016111      0xff9 Src/sx1272.o
+ .debug_line    0x000000000001710a      0xa01 Src/sysIrqHandlers.o
+ .debug_line    0x0000000000017b0b      0x894 Src/system_stm32l1xx.o
+ .debug_line    0x000000000001839f      0xb6f Src/timer.o
+ .debug_line    0x0000000000018f0e      0xacc Src/uart-board.o
+ .debug_line    0x00000000000199da      0xa38 Src/utilities.o
+ .debug_line    0x000000000001a412       0x7d startup/startup_stm32l151xb.o
 
-.debug_str      0x0000000000000000    0x9b52c
+.debug_str      0x0000000000000000    0x9b2cf
  .debug_str     0x0000000000000000    0x84642 Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal.o
                                       0x849f9 (size before relaxing)
  .debug_str     0x0000000000084642      0x719 Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_adc.o
@@ -13710,55 +13706,55 @@ OUTPUT(flowsensor.elf elf32-littlearm)
                                       0x8fa70 (size before relaxing)
  .debug_str     0x0000000000091f1c      0x1b5 Src/LoRaMacCrypto.o
                                        0x67e0 (size before relaxing)
- .debug_str     0x00000000000920d1     0x245c Src/Region.o
-                                       0x9866 (size before relaxing)
- .debug_str     0x000000000009452d      0xcfa Src/RegionCommon.o
+ .debug_str     0x00000000000920d1     0x23ba Src/Region.o
+                                       0x97c4 (size before relaxing)
+ .debug_str     0x000000000009448b      0xcfa Src/RegionCommon.o
                                        0x75f3 (size before relaxing)
- .debug_str     0x0000000000095227      0x175 Src/RegionEU868.o
-                                      0x8f334 (size before relaxing)
- .debug_str     0x000000000009539c       0xc9 Src/adc-board.o
+ .debug_str     0x0000000000095185      0x175 Src/RegionIN865.o
+                                      0x8f292 (size before relaxing)
+ .debug_str     0x00000000000952fa       0xc9 Src/adc-board.o
                                       0x8d3ed (size before relaxing)
- .debug_str     0x0000000000095465       0x3d Src/adc.o
+ .debug_str     0x00000000000953c3       0x3d Src/adc.o
                                       0x8d0ce (size before relaxing)
- .debug_str     0x00000000000954a2     0x1e30 Src/aes.o
+ .debug_str     0x0000000000095400     0x1e30 Src/aes.o
                                        0x835c (size before relaxing)
- .debug_str     0x00000000000972d2      0x394 Src/board.o
+ .debug_str     0x0000000000097230      0x394 Src/board.o
                                       0x8db36 (size before relaxing)
- .debug_str     0x0000000000097666       0xf7 Src/cmac.o
+ .debug_str     0x00000000000975c4       0xf7 Src/cmac.o
                                        0x3776 (size before relaxing)
- .debug_str     0x000000000009775d       0x17 Src/delay.o
+ .debug_str     0x00000000000976bb       0x17 Src/delay.o
                                       0x8d074 (size before relaxing)
- .debug_str     0x0000000000097774       0x57 Src/fifo.o
+ .debug_str     0x00000000000976d2       0x57 Src/fifo.o
                                        0x3594 (size before relaxing)
- .debug_str     0x00000000000977cb      0x253 Src/gpio-board.o
+ .debug_str     0x0000000000097729      0x253 Src/gpio-board.o
                                       0x8d750 (size before relaxing)
- .debug_str     0x0000000000097a1e       0x47 Src/gpio.o
+ .debug_str     0x000000000009797c       0x47 Src/gpio.o
                                       0x8d25d (size before relaxing)
- .debug_str     0x0000000000097a65     0x287c Src/main.o
-                                      0x913bc (size before relaxing)
- .debug_str     0x000000000009a2e1       0xc4 Src/pb_common.o
+ .debug_str     0x00000000000979c3     0x26c1 Src/main.o
+                                      0x911c2 (size before relaxing)
+ .debug_str     0x000000000009a084       0xc4 Src/pb_common.o
                                        0x7d88 (size before relaxing)
- .debug_str     0x000000000009a3a5      0x42d Src/pb_encode.o
+ .debug_str     0x000000000009a148      0x42d Src/pb_encode.o
                                        0x82a3 (size before relaxing)
- .debug_str     0x000000000009a7d2      0x45f Src/rtc-board.o
+ .debug_str     0x000000000009a575      0x45f Src/rtc-board.o
                                       0x8e55f (size before relaxing)
- .debug_str     0x000000000009ac31       0x13 Src/sensed.pb.o
+ .debug_str     0x000000000009a9d4       0x13 Src/sensed.pb.o
                                        0x7d8e (size before relaxing)
- .debug_str     0x000000000009ac44       0x81 Src/spi-board.o
+ .debug_str     0x000000000009a9e7       0x81 Src/spi-board.o
                                       0x8d1e1 (size before relaxing)
- .debug_str     0x000000000009acc5      0x104 Src/sx1272-board.o
+ .debug_str     0x000000000009aa68      0x104 Src/sx1272-board.o
                                       0x8d2a6 (size before relaxing)
- .debug_str     0x000000000009adc9      0x387 Src/sx1272.o
+ .debug_str     0x000000000009ab6c      0x387 Src/sx1272.o
                                       0x8dea1 (size before relaxing)
- .debug_str     0x000000000009b150       0x6b Src/sysIrqHandlers.o
+ .debug_str     0x000000000009aef3       0x6b Src/sysIrqHandlers.o
                                       0x8d0b2 (size before relaxing)
- .debug_str     0x000000000009b1bb       0x70 Src/system_stm32l1xx.o
+ .debug_str     0x000000000009af5e       0x70 Src/system_stm32l1xx.o
                                       0x84433 (size before relaxing)
- .debug_str     0x000000000009b22b      0x107 Src/timer.o
+ .debug_str     0x000000000009afce      0x107 Src/timer.o
                                       0x8d32e (size before relaxing)
- .debug_str     0x000000000009b332      0x1bd Src/uart-board.o
+ .debug_str     0x000000000009b0d5      0x1bd Src/uart-board.o
                                       0x8d815 (size before relaxing)
- .debug_str     0x000000000009b4ef       0x3d Src/utilities.o
+ .debug_str     0x000000000009b292       0x3d Src/utilities.o
                                       0x8d0c4 (size before relaxing)
 
 .comment        0x0000000000000000       0x7f
@@ -13781,7 +13777,7 @@ OUTPUT(flowsensor.elf elf32-littlearm)
  .comment       0x000000000000007f       0x80 Src/LoRaMacCrypto.o
  .comment       0x000000000000007f       0x80 Src/Region.o
  .comment       0x000000000000007f       0x80 Src/RegionCommon.o
- .comment       0x000000000000007f       0x80 Src/RegionEU868.o
+ .comment       0x000000000000007f       0x80 Src/RegionIN865.o
  .comment       0x000000000000007f       0x80 Src/adc-board.o
  .comment       0x000000000000007f       0x80 Src/adc.o
  .comment       0x000000000000007f       0x80 Src/aes.o
@@ -13805,7 +13801,7 @@ OUTPUT(flowsensor.elf elf32-littlearm)
  .comment       0x000000000000007f       0x80 Src/uart-board.o
  .comment       0x000000000000007f       0x80 Src/utilities.o
 
-.debug_frame    0x0000000000000000     0x3ed0
+.debug_frame    0x0000000000000000     0x3ec8
  .debug_frame   0x0000000000000000      0x168 Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal.o
  .debug_frame   0x0000000000000168      0x2c8 Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_adc.o
  .debug_frame   0x0000000000000430      0x13c Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_cortex.o
@@ -13824,37 +13820,37 @@ OUTPUT(flowsensor.elf elf32-littlearm)
  .debug_frame   0x0000000000001b78       0xd8 Src/LoRaMacCrypto.o
  .debug_frame   0x0000000000001c50      0x244 Src/Region.o
  .debug_frame   0x0000000000001e94      0x1d0 Src/RegionCommon.o
- .debug_frame   0x0000000000002064      0x338 Src/RegionEU868.o
- .debug_frame   0x000000000000239c       0x6c Src/adc-board.o
- .debug_frame   0x0000000000002408       0x50 Src/adc.o
- .debug_frame   0x0000000000002458      0x114 Src/aes.o
- .debug_frame   0x000000000000256c      0x1cc Src/board.o
- .debug_frame   0x0000000000002738       0x84 Src/cmac.o
- .debug_frame   0x00000000000027bc       0x40 Src/delay.o
- .debug_frame   0x00000000000027fc       0xa0 Src/fifo.o
- .debug_frame   0x000000000000289c      0x184 Src/gpio-board.o
- .debug_frame   0x0000000000002a20       0xa0 Src/gpio.o
- .debug_frame   0x0000000000002ac0      0x120 Src/main.o
- .debug_frame   0x0000000000002be0       0x60 Src/pb_common.o
- .debug_frame   0x0000000000002c40      0x398 Src/pb_encode.o
- .debug_frame   0x0000000000002fd8      0x230 Src/rtc-board.o
- .debug_frame   0x0000000000003208       0xa8 Src/spi-board.o
- .debug_frame   0x00000000000032b0      0x11c Src/sx1272-board.o
- .debug_frame   0x00000000000033cc      0x3e8 Src/sx1272.o
- .debug_frame   0x00000000000037b4       0x60 Src/sysIrqHandlers.o
- .debug_frame   0x0000000000003814       0x30 Src/system_stm32l1xx.o
- .debug_frame   0x0000000000003844      0x17c Src/timer.o
- .debug_frame   0x00000000000039c0      0x124 Src/uart-board.o
- .debug_frame   0x0000000000003ae4       0x8c Src/utilities.o
- .debug_frame   0x0000000000003b70       0x34 /home/sridhar/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libm.a(lib_a-s_ceil.o)
- .debug_frame   0x0000000000003ba4       0x34 /home/sridhar/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libm.a(lib_a-s_floor.o)
- .debug_frame   0x0000000000003bd8       0x30 /home/sridhar/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libm.a(lib_a-s_round.o)
- .debug_frame   0x0000000000003c08       0xac /home/sridhar/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-m/libgcc.a(_arm_addsubdf3.o)
- .debug_frame   0x0000000000003cb4       0x50 /home/sridhar/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-m/libgcc.a(_arm_muldivdf3.o)
- .debug_frame   0x0000000000003d04       0xc4 /home/sridhar/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-m/libgcc.a(_arm_cmpdf2.o)
- .debug_frame   0x0000000000003dc8       0x24 /home/sridhar/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-m/libgcc.a(_arm_fixdfsi.o)
- .debug_frame   0x0000000000003dec       0x24 /home/sridhar/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-m/libgcc.a(_arm_fixunsdfsi.o)
- .debug_frame   0x0000000000003e10       0x4c /home/sridhar/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-m/libgcc.a(_arm_addsubsf3.o)
- .debug_frame   0x0000000000003e5c       0x2c /home/sridhar/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-init.o)
- .debug_frame   0x0000000000003e88       0x28 /home/sridhar/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-memcpy-stub.o)
- .debug_frame   0x0000000000003eb0       0x20 /home/sridhar/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-memset.o)
+ .debug_frame   0x0000000000002064      0x334 Src/RegionIN865.o
+ .debug_frame   0x0000000000002398       0x6c Src/adc-board.o
+ .debug_frame   0x0000000000002404       0x50 Src/adc.o
+ .debug_frame   0x0000000000002454      0x114 Src/aes.o
+ .debug_frame   0x0000000000002568      0x1cc Src/board.o
+ .debug_frame   0x0000000000002734       0x84 Src/cmac.o
+ .debug_frame   0x00000000000027b8       0x40 Src/delay.o
+ .debug_frame   0x00000000000027f8       0xa0 Src/fifo.o
+ .debug_frame   0x0000000000002898      0x184 Src/gpio-board.o
+ .debug_frame   0x0000000000002a1c       0xa0 Src/gpio.o
+ .debug_frame   0x0000000000002abc      0x11c Src/main.o
+ .debug_frame   0x0000000000002bd8       0x60 Src/pb_common.o
+ .debug_frame   0x0000000000002c38      0x398 Src/pb_encode.o
+ .debug_frame   0x0000000000002fd0      0x230 Src/rtc-board.o
+ .debug_frame   0x0000000000003200       0xa8 Src/spi-board.o
+ .debug_frame   0x00000000000032a8      0x11c Src/sx1272-board.o
+ .debug_frame   0x00000000000033c4      0x3e8 Src/sx1272.o
+ .debug_frame   0x00000000000037ac       0x60 Src/sysIrqHandlers.o
+ .debug_frame   0x000000000000380c       0x30 Src/system_stm32l1xx.o
+ .debug_frame   0x000000000000383c      0x17c Src/timer.o
+ .debug_frame   0x00000000000039b8      0x124 Src/uart-board.o
+ .debug_frame   0x0000000000003adc       0x8c Src/utilities.o
+ .debug_frame   0x0000000000003b68       0x34 /home/sridhar/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libm.a(lib_a-s_ceil.o)
+ .debug_frame   0x0000000000003b9c       0x34 /home/sridhar/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libm.a(lib_a-s_floor.o)
+ .debug_frame   0x0000000000003bd0       0x30 /home/sridhar/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libm.a(lib_a-s_round.o)
+ .debug_frame   0x0000000000003c00       0xac /home/sridhar/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-m/libgcc.a(_arm_addsubdf3.o)
+ .debug_frame   0x0000000000003cac       0x50 /home/sridhar/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-m/libgcc.a(_arm_muldivdf3.o)
+ .debug_frame   0x0000000000003cfc       0xc4 /home/sridhar/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-m/libgcc.a(_arm_cmpdf2.o)
+ .debug_frame   0x0000000000003dc0       0x24 /home/sridhar/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-m/libgcc.a(_arm_fixdfsi.o)
+ .debug_frame   0x0000000000003de4       0x24 /home/sridhar/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-m/libgcc.a(_arm_fixunsdfsi.o)
+ .debug_frame   0x0000000000003e08       0x4c /home/sridhar/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7-m/libgcc.a(_arm_addsubsf3.o)
+ .debug_frame   0x0000000000003e54       0x2c /home/sridhar/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-init.o)
+ .debug_frame   0x0000000000003e80       0x28 /home/sridhar/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-memcpy-stub.o)
+ .debug_frame   0x0000000000003ea8       0x20 /home/sridhar/Ac6/SystemWorkbench/plugins/fr.ac6.mcu.externaltools.arm-none.linux64_1.15.0.201708311556/tools/compiler/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-memset.o)
