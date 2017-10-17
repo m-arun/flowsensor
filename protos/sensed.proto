@@ -1,0 +1,5 @@
+message Sensed {
+	required int32 timestamp = 1;
+	required int32 flow = 2;
+	required int32 battery = 3;
+}
