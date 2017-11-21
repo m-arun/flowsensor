@@ -67,7 +67,7 @@ Maintainer: Andreas Pella (IMST GmbH), Miguel Luis and Gregory Cristian
  */
 #define LORAWAN_DUTYCYCLE_ON                        false
 
-#define USE_SEMTECH_DEFAULT_CHANNEL_LINEUP          1
+#define USE_SEMTECH_DEFAULT_CHANNEL_LINEUP          0
 
 #if( USE_SEMTECH_DEFAULT_CHANNEL_LINEUP == 1 )
 
@@ -201,8 +201,8 @@ struct ComplianceTest_s
  *
  *
  */
-
-uint16_t flow = 0;
+uint16_t adc_val;
+uint16_t flow = 0.0;
 uint16_t vdd = 0;
 uint32_t timestamp = 0;
 uint8_t status = 0,protoLen = 0;
@@ -251,9 +251,9 @@ static void PrepareTxFrame( uint8_t port )
 			vdd = BoardGetBatteryLevel( );
 
             // Read the current potentiometer setting in percent
-//            flow = BoardMeasurePotiLevel( );
+            flow = BoardMeasurePotiLevel( );
+            //adc_val = (adc_val/4095) * 3.3;
 
-            flow = (660/0.016)*((vdd/110) - 0.004);
 
 
             timestamp = TimerGetCurrentTime();
